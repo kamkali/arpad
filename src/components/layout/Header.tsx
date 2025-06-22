@@ -11,11 +11,11 @@ import React from 'react';
 const ArpadLogo = () => (
   <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g>
-      <rect x="0" y="4" width="45" height="32" rx="8" fill="#023047"/>
-      <rect x="8" y="0" width="45" height="32" rx="8" fill="#219EBC"/>
-      <path d="M23 24L30.5 8L38 24M26 18H35" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M0 40L20 0L26 0L6 40H0Z" fill="#023047"/>
+        <path d="M24 0L44 40H38L18 0H24Z" fill="#023047"/>
+        <path d="M11 25H33L30 32H14L11 25Z" fill="#219EBC"/>
     </g>
-    <text x="60" y="28" fontFamily="Poppins, sans-serif" fontSize="24" fontWeight="bold" fill="#023047">ARPAD</text>
+    <text x="55" y="28" fontFamily="Poppins, sans-serif" fontSize="24" fontWeight="bold" fill="#023047">ARPAD</text>
   </svg>
 );
 
