@@ -21,7 +21,7 @@ const ArpadLogo = () => (
           <path 
             fillRule="evenodd" 
             clipRule="evenodd" 
-            d="M35 41L55 0H78C80.2091 0 82 1.79086 82 4V37C82 39.2091 80.2091 41 78 41H35ZM67 12L60 35H65L67 29L69 35H74L67 12Z" 
+            d="M35 41L55 0H78C80.2091 0 82 1.79086 82 4V37C82 39.2091 80.2091 41 78 41H35Z M69 14 L62 35 H67.5 L69 31 L70.5 35 H76 L69 14Z"
             fill="hsl(var(--accent))"
           />
         </g>
