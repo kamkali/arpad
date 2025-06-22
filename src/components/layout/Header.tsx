@@ -13,15 +13,10 @@ const ArpadLogo = () => (
       <g transform="translate(0, 2)">
         {/* Icon */}
         <g transform="skewX(-15)">
-          {/* Back folder */}
-          <path d="M5 45 L 30 0 H 45 L 20 45 H 5 Z" fill="hsl(var(--primary))"/>
-          {/* Paper stack */}
-          <path d="M22 41 L 42 0 H 52 L 32 41 H 22 Z" fill="hsl(var(--muted))" opacity="0.5" transform="translate(3,0)"/>
-          {/* Main Accent Shape with 'A' cutout */}
-          <path 
-            fillRule="evenodd" 
-            clipRule="evenodd" 
-            d="M35 41L55 0H78C80.2091 0 82 1.79086 82 4V37C82 39.2091 80.2091 41 78 41H35Z M69 14 L62 35 H67.5 L69 31 L70.5 35 H76 L69 14Z"
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M 10 0 H 55 V 45 H 10 Z M 32.5 5 L 50 40 H 44 L 37.5 25 H 27.5 L 21 40 H 15 Z"
             fill="hsl(var(--accent))"
           />
         </g>
