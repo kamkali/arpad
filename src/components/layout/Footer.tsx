@@ -7,30 +7,30 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-slate-800 text-slate-300">
       <div className="container py-12 px-4 md:px-6">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="text-lg font-bold font-headline">ARPAD Sp. z o.o.</h3>
-            <p className="mt-2 text-sm text-primary-foreground/80">
+            <h3 className="text-lg font-bold text-white font-headline">ARPAD Sp. z o.o.</h3>
+            <p className="mt-2 text-sm">
               Zakład Obsługi Archiwalnej
             </p>
-            <div className="mt-4 text-xs text-primary-foreground/60 space-y-1">
+            <div className="mt-4 text-xs space-y-1">
               <p>NIP: 6372061320</p>
               <p>KRS: 0000236049</p>
               <p>REGON: 120067644</p>
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-bold font-headline">Informacje</h3>
+            <h3 className="text-lg font-bold text-white font-headline">Informacje</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <Link href="/o-firmie#rodo" className="hover:underline text-primary-foreground/80">RODO</Link>
+                <Link href="/o-firmie#rodo" className="hover:text-primary transition-colors">RODO</Link>
               </li>
               <li>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="link" className="p-0 h-auto text-primary-foreground/80 hover:underline">Przechowalnictwo</Button>
+                    <Button variant="link" className="p-0 h-auto text-slate-300 hover:text-primary transition-colors">Przechowalnictwo</Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-3xl bg-background text-foreground">
                     <DialogHeader>
@@ -86,20 +86,32 @@ export default function Footer() {
                 </Dialog>
               </li>
               <li>
-                <a href="/wp-content/uploads/2023/01/Wniosek-o-wydanie-dokumentow.doc" className="hover:underline text-primary-foreground/80" download>Pobierz wniosek</a>
+                <a href="/wp-content/uploads/2023/01/Wniosek-o-wydanie-dokumentow.doc" className="hover:text-primary transition-colors" download>Pobierz wniosek</a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold font-headline">Przydatne linki</h3>
+            <h3 className="text-lg font-bold text-white font-headline">Przydatne linki</h3>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><a href="https://www.archiwa.gov.pl/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary-foreground/80">Archiwa Państwowe</a></li>
-              <li><a href="https://www.zus.pl/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary-foreground/80">Zakład Ubezpieczeń Społecznych</a></li>
-              <li><a href="https://e-kartoteka.net/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary-foreground/80">Archiwa Państwowe - dok. pracownicza</a></li>
+              <li><a href="https://www.archiwa.gov.pl/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Archiwa Państwowe</a></li>
+              <li><a href="https://www.zus.pl/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Zakład Ubezpieczeń Społecznych</a></li>
+              <li><a href="https://e-kartoteka.net/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Archiwa Państwowe - dok. pracownicza</a></li>
             </ul>
           </div>
+           <div>
+            <h3 className="text-lg font-bold text-white font-headline">Kontakt</h3>
+             <div className="mt-4 text-sm space-y-2">
+               <p>Krzykawa 7<br />32-329 Bolesław</p>
+               <p>
+                 <a href="tel:+48326424780" className="hover:text-primary transition-colors">+48 32 6424780</a>
+               </p>
+               <p>
+                 <a href="mailto:arpad@arpad.pl" className="hover:text-primary transition-colors">arpad@arpad.pl</a>
+               </p>
+             </div>
+           </div>
         </div>
-        <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
+        <div className="mt-8 border-t border-slate-700 pt-8 text-center text-sm text-slate-400">
           <p>©{new Date().getFullYear()}. Zakład Obsługi Archiwalnej ARPAD Spółka z o.o. Wszystkie prawa zastrzeżone.</p>
         </div>
       </div>

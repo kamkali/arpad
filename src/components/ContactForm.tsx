@@ -51,14 +51,15 @@ export default function ContactForm() {
     toast({
       title: "Wiadomość wysłana!",
       description: "Dziękujemy za kontakt. Odpowiemy wkrótce.",
+      variant: "default"
     });
     form.reset();
   }
 
   return (
-    <Card className="border-border/50">
+    <Card className="border-border/50 bg-card shadow-lg">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-primary">Napisz do nas</CardTitle>
+        <CardTitle className="text-2xl font-bold text-foreground">Napisz do nas</CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -121,7 +122,7 @@ export default function ContactForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-accent hover:bg-accent/90">Wyślij</Button>
+            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Wyślij</Button>
           </form>
         </Form>
       </CardContent>
