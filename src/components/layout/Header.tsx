@@ -17,22 +17,13 @@ const ArpadLogo = () => (
           <path d="M5 45 L 30 0 H 45 L 20 45 H 5 Z" fill="hsl(var(--primary))"/>
           {/* Paper stack */}
           <path d="M22 41 L 42 0 H 52 L 32 41 H 22 Z" fill="hsl(var(--muted))" opacity="0.5" transform="translate(3,0)"/>
-          {/* Main Accent Shape */}
-          <path d="M35 41 L 55 0 H 78 C 80.2091 0 82 1.79086 82 4 V 37 C 82 39.2091 80.2091 41 78 41 H 35 Z" fill="hsl(var(--accent))"/>
-          {/* Letter A */}
-          <text
-            x="62"
-            y="35"
-            fontFamily="Poppins"
-            fontSize="32"
-            fontWeight="700"
-            fontStyle="italic"
-            fill="white"
-            textAnchor="middle"
-            transform="skewX(15)"
-          >
-            A
-          </text>
+          {/* Main Accent Shape with 'A' cutout */}
+          <path 
+            fillRule="evenodd" 
+            clipRule="evenodd" 
+            d="M35 41L55 0H78C80.2091 0 82 1.79086 82 4V37C82 39.2091 80.2091 41 78 41H35ZM67 12L60 35H65L67 29L69 35H74L67 12Z" 
+            fill="hsl(var(--accent))"
+          />
         </g>
         {/* Text */}
         <g transform="translate(95, 0)">
