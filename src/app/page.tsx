@@ -1,32 +1,30 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { FileStack, Mail, UsersRound } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Archive, ArrowRight, BarChart, FileCheck, Mail, Phone, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import React from 'react';
+import OnScrollAnimator from '@/components/OnScrollAnimator';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 export default function Home() {
 
-  const infoCards = [
+  const benefits = [
     {
-      href: '/o-firmie',
-      icon: <UsersRound className="h-10 w-10 text-primary" />,
-      title: 'O NAS',
-      description: 'Naszymi klientami są spółki prawa handlowego, organy administracji państwowej i państwowe jednostki organizacyjne, spółdzielnie, stowarzyszenia...',
+      icon: <ShieldCheck className="h-10 w-10 text-accent" />,
+      title: 'Bezpieczeństwo i RODO',
+      description: 'Gwarantujemy pełną poufność i zgodność z RODO na każdym etapie archiwizacji.',
     },
     {
-      href: '/oferta-2',
-      icon: <FileStack className="h-10 w-10 text-primary" />,
-      title: 'OFERTA',
-      description: 'W pracach archiwistycznych używane są narzędzia informatyczne dostępne w ramach pakietów biurowych Microsoft Office.',
+      icon: <BarChart className="h-10 w-10 text-accent" />,
+      title: 'Oszczędność kosztów',
+      description: 'Działamy bez pośredników, co przekłada się na optymalne koszty i pełną kontrolę nad procesem.',
     },
     {
-      href: '/#kontakt',
-      icon: <Mail className="h-10 w-10 text-primary" />,
-      title: 'KONTAKT',
-      description: 'Zapraszamy serdecznie do korzystania z naszych usług. Na życzenie przedstawiamy listę naszych kontrahentów oraz referencje.',
-    }
+      icon: <FileCheck className="h-10 w-10 text-accent" />,
+      title: 'Doświadczenie i Ekspertyza',
+      description: 'Wykorzystujemy sprawdzone metody i własne narzędzia, zapewniając najwyższą jakość usług.',
+    },
   ];
 
   const accordionItems = [
@@ -47,101 +45,170 @@ export default function Home() {
     },
     {
       value: 'item-4',
-      trigger: 'Struktura organizacyjna',
-      content: 'Nasza elastyczna struktura pozwala na szybkie dostosowanie się do indywidualnych potrzeb każdego klienta.',
-    },
-    {
-      value: 'item-5',
       trigger: 'Duże doświadczenie w branży archiwistycznej',
       content: 'Wieloletnia obecność na rynku i setki zrealizowanych projektów to gwarancja naszego profesjonalizmu.',
     },
   ];
+  
+  const currentYear = new Date().getFullYear();
+  const experienceYears = currentYear - 1993;
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full h-[50vh] md:h-[70vh] text-white">
-        <Image
-          src="https://placehold.co/1920x700.png"
-          alt="Archiwum z segregatorami"
-          fill={true}
-          style={{objectFit: 'cover'}}
-          quality={100}
-          className="brightness-75"
-          data-ai-hint="red binders office"
-        />
-        <div className="relative z-10 flex flex-col items-start justify-center h-full container px-4 md:px-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight uppercase">
-            Usługi<br />Archiwistyczne
-          </h1>
-          <p className="mt-4 max-w-lg text-lg md:text-xl">
-            Wykonujemy usługi archiwistyczne zgodnie z obowiązującymi aktami normatywnymi z zakresu działalności archiwów oraz metodyki archiwalnej.
-          </p>
-          <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90">
-            <Link href="/oferta-2">więcej</Link>
-          </Button>
+      <section className="relative w-full min-h-[70vh] md:min-h-[80vh] flex items-center bg-primary text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+            <Image
+            src="https://placehold.co/1920x1080.png"
+            alt="Abstrakcyjne tło archiwum"
+            fill={true}
+            style={{objectFit: 'cover'}}
+            quality={80}
+            priority
+            data-ai-hint="blueprint abstract"
+            />
+        </div>
+        <div className="container relative z-10 px-4 md:px-6">
+          <OnScrollAnimator>
+            <div className="max-w-3xl">
+              <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
+                Nowoczesna Archiwizacja, <span className="text-accent">Dekady Zaufania.</span>
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg md:text-xl text-primary-foreground/80">
+                Łączymy ponad 25 lat doświadczenia z innowacyjnym podejściem do zarządzania dokumentacją. Zapewniamy bezpieczeństwo, porządek i spokój ducha.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Link href="/oferta-2">Poznaj naszą ofertę <ArrowRight className="ml-2" /></Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10">
+                  <Link href="#kontakt">Skontaktuj się z nami</Link>
+                </Button>
+              </div>
+            </div>
+          </OnScrollAnimator>
         </div>
       </section>
 
-      {/* Info Cards Section */}
-      <section className="w-full py-12 md:py-20 -mt-20 relative z-20">
+      {/* Stats Section */}
+      <section className="w-full py-16 md:py-24 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-8 md:grid-cols-3">
-            {infoCards.map((card, index) => (
-              <Link href={card.href} key={index} className="group">
-                <Card className="h-full text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+          <div className="grid gap-8 md:grid-cols-3 text-center">
+            <OnScrollAnimator delay={0}>
+              <div className="p-4">
+                <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
+                  <AnimatedCounter to={experienceYears} />
+                </h3>
+                <p className="mt-2 text-lg font-medium text-foreground/80">lat na rynku</p>
+              </div>
+            </OnScrollAnimator>
+            <OnScrollAnimator delay={0.2}>
+              <div className="p-4">
+                <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
+                  <AnimatedCounter to={500} suffix="+" />
+                </h3>
+                <p className="mt-2 text-lg font-medium text-foreground/80">zadowolonych klientów</p>
+              </div>
+            </OnScrollAnimator>
+            <OnScrollAnimator delay={0.4}>
+             <div className="p-4">
+                <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
+                  <AnimatedCounter to={100} suffix="%" />
+                </h3>
+                <p className="mt-2 text-lg font-medium text-foreground/80">gwarancji bezpieczeństwa</p>
+              </div>
+            </OnScrollAnimator>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section id="benefits" className="w-full py-16 md:py-24 bg-muted/50">
+        <div className="container px-4 md:px-6">
+          <OnScrollAnimator className="text-center max-w-3xl mx-auto">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Twoje Korzyści ze Współpracy z Arpad</h2>
+            <p className="mt-4 text-lg text-foreground/70">
+              Nasze usługi to nie tylko porządkowanie dokumentów. To realne wsparcie dla Twojego biznesu.
+            </p>
+          </OnScrollAnimator>
+          <div className="grid gap-8 md:grid-cols-3 mt-12">
+            {benefits.map((benefit, index) => (
+              <OnScrollAnimator key={index} delay={index * 0.2}>
+                <Card className="h-full text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out bg-card">
                   <CardHeader className="items-center">
-                    <div className="bg-primary/10 rounded-full p-4 group-hover:bg-primary transition-colors">
-                      {React.cloneElement(card.icon, { className: 'h-10 w-10 text-primary group-hover:text-white transition-colors' })}
+                    <div className="bg-accent/10 rounded-full p-4">
+                      {benefit.icon}
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <h3 className="text-xl font-bold font-headline text-foreground">{card.title}</h3>
-                    <p className="text-foreground/70 mt-2 text-sm">{card.description}</p>
+                    <h3 className="text-xl font-bold font-headline text-primary">{benefit.title}</h3>
+                    <p className="text-foreground/70 mt-2">{benefit.description}</p>
                   </CardContent>
                 </Card>
-              </Link>
+              </OnScrollAnimator>
             ))}
           </div>
         </div>
       </section>
 
       {/* Accordion Section */}
-      <section className="w-full py-12 md:py-24 bg-background">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl text-foreground font-headline">
-            Dlaczego warto skorzystać z Naszej oferty
-          </h2>
-          <div className="mx-auto max-w-3xl mt-12">
+      <section className="w-full py-16 md:py-24 bg-background">
+        <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
+            <OnScrollAnimator>
+                <div className="max-w-xl">
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
+                        Dlaczego warto nam zaufać?
+                    </h2>
+                    <p className="mt-4 text-lg text-foreground/70">
+                        Nasza transparentność i kompleksowe podejście to fundamenty, na których budujemy długotrwałe relacje z klientami. Zapewniamy wszystko, czego potrzebujesz do profesjonalnej archiwizacji.
+                    </p>
+                    <Button asChild size="lg" className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90">
+                        <Link href="/o-firmie">Dowiedz się więcej o nas</Link>
+                    </Button>
+                </div>
+            </OnScrollAnimator>
+          <OnScrollAnimator delay={0.2}>
             <Accordion type="single" collapsible className="w-full">
               {accordionItems.map((item) => (
                 <AccordionItem value={item.value} key={item.value}>
-                  <AccordionTrigger className="text-lg hover:text-primary">{item.trigger}</AccordionTrigger>
+                  <AccordionTrigger className="text-lg font-medium text-left hover:text-accent">{item.trigger}</AccordionTrigger>
                   <AccordionContent className="text-base text-foreground/80">{item.content}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
+          </OnScrollAnimator>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="kontakt" className="w-full py-12 md:py-24 bg-muted/50">
-        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground font-headline">KONTAKT</h2>
-            <p className="mx-auto max-w-[600px] text-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Masz pytania? Chcesz nawiązać współpracę? Skontaktuj się z nami, korzystając z poniższych danych.
+      <section id="kontakt" className="w-full py-16 md:py-24 bg-primary text-primary-foreground">
+        <div className="container px-4 md:px-6 text-center">
+          <OnScrollAnimator>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Skontaktuj się z nami</h2>
+            <p className="mt-4 mx-auto max-w-2xl text-lg text-primary-foreground/80">
+              Masz pytania lub chcesz rozpocząć współpracę? Jesteśmy do Twojej dyspozycji. Zadzwoń lub napisz, aby uzyskać bezpłatną wycenę.
             </p>
-          </div>
-          <div className="mx-auto w-full max-w-md mt-8">
-            <div className="text-left space-y-4 p-8 rounded-lg bg-card shadow-lg">
-                <h3 className="text-2xl font-bold text-foreground text-center">Dane kontaktowe</h3>
-                <p><strong>Adres:</strong> Krzykawa 7, 32-329 Bolesław, małopolskie, Polska</p>
-                <p><strong>Telefon:</strong> <a href="tel:+48326424780" className="hover:underline text-primary">+48 32 6424780</a>, <a href="tel:+48501439752" className="hover:underline text-primary">+48 501 439 752</a></p>
-                <p><strong>Email:</strong> <a href="mailto:arpad@arpad.pl" className="hover:underline text-primary">arpad@arpad.pl</a></p>
+            <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+                <a href="tel:+48326424780" className="flex items-center gap-4 group">
+                    <Phone className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
+                    <div>
+                        <p className="text-sm text-primary-foreground/70">Telefon</p>
+                        <p className="text-2xl font-semibold group-hover:text-accent transition-colors">+48 32 642 47 80</p>
+                    </div>
+                </a>
+                 <a href="mailto:arpad@arpad.pl" className="flex items-center gap-4 group">
+                    <Mail className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
+                    <div>
+                        <p className="text-sm text-primary-foreground/70">Email</p>
+                        <p className="text-2xl font-semibold group-hover:text-accent transition-colors">arpad@arpad.pl</p>
+                    </div>
+                </a>
             </div>
-          </div>
+            <div className="mt-10 text-center">
+                <p className="font-semibold">Zakład Obsługi Archiwalnej ARPAD Sp. z o.o.</p>
+                <p className="text-primary-foreground/80">Krzykawa 7, 32-329 Bolesław, małopolskie, Polska</p>
+            </div>
+          </OnScrollAnimator>
         </div>
       </section>
     </div>
