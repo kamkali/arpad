@@ -9,24 +9,31 @@ import { Menu, ArrowRight } from 'lucide-react';
 import React from 'react';
 
 const ArpadLogo = () => (
-  <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g transform="translate(0, 2)">
-      {/* Icon */}
-      <g transform="skewX(-8) translate(5,0)">
+  <svg width="240" height="50" viewBox="0 0 240 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      {/* Icon Part */}
+      <g transform="skewX(-10)">
+        {/* Dark blue bar */}
+        <path d="M0 0 H 20 V 45 H 0 Z" fill="hsl(var(--primary))" />
+        {/* Light separator bar */}
+        <path d="M24 0 H 32 V 45 H 24 Z" fill="hsl(var(--muted))" />
+        {/* Teal background for 'A' with negative space cutout */}
         <path 
           fillRule="evenodd" 
           clipRule="evenodd" 
-          d="M32.5 2L0 45H8L32.5 8.5L57 45H65L32.5 2ZM32.5 12.5C29.5 17.5 26 21.5 23 23L27 32H38L42 23C39 21.5 35.5 17.5 32.5 12.5Z" 
-          fill="hsl(var(--primary))"
+          d="M36,0 H67 C72.5,0 77,4.5 77,10 V 35 C77,40.5 72.5,45 67,45 H 36 V 0 Z M56.5,13 L46.5,35 H50.5 L53,28 H60 L62.5,35 H66.5 L56.5,13 Z M54.5,24 L56.5,20 L58.5,24 H 54.5 Z"
+          fill="hsl(var(--accent))"
         />
       </g>
-      {/* Text */}
-      <g transform="translate(75, 0)">
+
+      {/* Text Part */}
+      <g transform="translate(98, 2)">
         <text x="0" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="600" fill="hsl(var(--primary))">
           ARPAD
         </text>
-        <text x="105" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="300" fill="hsl(var(--secondary))">
-          .PL
+        <line x1="0" y1="36" x2="115" y2="36" stroke="hsl(var(--secondary))" strokeWidth="1"/>
+        <text x="0" y="48" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="400" fill="hsl(var(--secondary))">
+          sp. z o.o.
         </text>
       </g>
     </g>
