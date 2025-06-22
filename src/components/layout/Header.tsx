@@ -12,7 +12,7 @@ const ArpadLogo = () => (
     <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g transform="translate(0, 2)">
         {/* Icon */}
-        <g transform="skewX(-10)">
+        <g transform="skewX(-15)">
           {/* Back folder */}
           <path d="M5 45 L 30 0 H 45 L 20 45 H 5 Z" fill="hsl(var(--primary))"/>
           {/* Paper stack */}
@@ -20,11 +20,19 @@ const ArpadLogo = () => (
           {/* Main Accent Shape */}
           <path d="M35 41 L 55 0 H 78 C 80.2091 0 82 1.79086 82 4 V 37 C 82 39.2091 80.2091 41 78 41 H 35 Z" fill="hsl(var(--accent))"/>
           {/* Letter A */}
-          <g fill="white">
-            <path d="M52 35 L 56 35 L 63 10 L 59 10 Z" />
-            <path d="M70 35 L 66 35 L 59 10 L 63 10 Z" />
-            <path d="M57 26 L 65 26 L 66 23 L 56 23 Z" />
-          </g>
+          <text
+            x="62"
+            y="35"
+            fontFamily="Poppins"
+            fontSize="32"
+            fontWeight="700"
+            fontStyle="italic"
+            fill="white"
+            textAnchor="middle"
+            transform="skewX(15)"
+          >
+            A
+          </text>
         </g>
         {/* Text */}
         <g transform="translate(95, 0)">
