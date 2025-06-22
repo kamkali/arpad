@@ -1,7 +1,7 @@
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Archive, Briefcase, Building, FileCog, FileStack, FolderLock, Scale, Search, ShieldCheck, Sprout, Train, Wrench } from "lucide-react";
+import { Briefcase, Building, FileCog, FileStack, FolderLock, Scale, ShieldCheck, Wrench } from "lucide-react";
 
 const services = [
     { icon: <Building />, title: "Organizacja archiwów zakładowych", description: "Tworzymy struktury archiwów od podstaw, zapewniając porządek i logikę." },
