@@ -16,18 +16,17 @@ const ArpadLogo = () => (
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M 10 0 H 55 V 45 H 10 Z M 32.5 5 L 50 40 H 44 L 37.5 25 H 27.5 L 21 40 H 15 Z"
+            d="M 10 0 H 55 V 45 H 10 Z M 18 40 L 47 40 L 47 18 L 33 18 L 33 14 L 23 14 L 23 18 L 18 18 Z"
             fill="hsl(var(--accent))"
           />
         </g>
         {/* Text */}
-        <g transform="translate(95, 0)">
-          <text x="0" y="24" fontFamily="Poppins, sans-serif" fontSize="26" fontWeight="600" fill="hsl(var(--foreground))" letterSpacing="-0.5" style={{fontStyle: 'italic'}}>
+        <g transform="translate(70, 0)">
+          <text x="0" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="600" fill="hsl(var(--primary))">
             ARPAD
           </text>
-          <line x1="0" y1="30" x2="120" y2="30" stroke="hsl(var(--secondary))" strokeWidth="1.5"/>
-          <text x="0" y="44" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="500" fill="hsl(var(--secondary))">
-            sp. z o.o.
+          <text x="105" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="300" fill="hsl(var(--secondary))">
+            .PL
           </text>
         </g>
       </g>
@@ -82,14 +81,14 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
+           <Link href={kontaktLink} className={cn("transition-colors hover:text-accent", scrolled ? "text-foreground" : "text-primary-foreground/80 hover:text-primary-foreground")}>
+              Kontakt
+            </Link>
         </nav>
         <div className="hidden md:flex items-center gap-4">
-             <Button asChild variant="ghost" className={cn("transition-colors hover:text-accent", scrolled ? "text-foreground hover:bg-accent/10" : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-transparent/20")}>
-                <Link href={kontaktLink}>Kontakt</Link>
-            </Button>
             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full">
                  <Link href={kontaktLink}>
-                    Wyceń projekt
+                    Uzyskaj wycenę
                     <ArrowRight className="ml-2 h-4 w-4"/>
                 </Link>
             </Button>
