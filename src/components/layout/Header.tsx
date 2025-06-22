@@ -12,12 +12,12 @@ const ArpadLogo = () => (
     <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g transform="translate(0, 2)">
         {/* Icon */}
-        <g transform="skewX(-15)">
+        <g transform="skewX(-8)">
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M 10 0 H 55 V 45 H 10 Z M 18 40 L 47 40 L 47 18 L 33 18 L 33 14 L 23 14 L 23 18 L 18 18 Z"
-            fill="hsl(var(--accent))"
+            d="M27.5 2C29.1569 2 30.5 3.34315 30.5 5L54 45H1L24.5 5C24.5 3.34315 25.8431 2 27.5 2Z M27.5 22L38 35H17L27.5 22Z"
+            fill="hsl(var(--primary))"
           />
         </g>
         {/* Text */}
