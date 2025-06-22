@@ -1,5 +1,3 @@
-import ContactForm from "@/components/ContactForm";
-
 const liquidatedCompanies = [
     'Przedsiębiorstwo Produkcyjno-Handlowe "ORION" Spółka z o. o. w upadłości w Tarnowskich Górach',
     'Firma "FALA" Sp. z o. o. Delikatesowe Przetwory z Ryb w upadłości w Chrzanowie',
@@ -66,15 +64,14 @@ export default function OFirmiePage() {
 
        <section className="mt-16 bg-muted/50 py-20">
             <div className="container px-4 md:px-6">
-                <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl text-foreground font-headline">Napisz do nas</h2>
-                <div className="mx-auto w-full max-w-4xl grid md:grid-cols-2 gap-12 mt-8 items-start">
-                    <div className="text-left space-y-4 my-auto">
-                        <h3 className="text-2xl font-bold text-foreground">Dane kontaktowe</h3>
+                <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl text-foreground font-headline">Kontakt</h2>
+                <div className="mx-auto w-full max-w-md mt-8">
+                    <div className="text-left space-y-4 p-8 rounded-lg bg-card shadow-lg">
+                        <h3 className="text-2xl font-bold text-foreground text-center">Dane kontaktowe</h3>
                         <p><strong>Adres:</strong> Krzykawa 7, 32-329 Bolesław, małopolskie, Polska</p>
                         <p><strong>Telefon:</strong> <a href="tel:+48326424780" className="hover:underline text-primary">+48 32 6424780</a>, <a href="tel:+48501439752" className="hover:underline text-primary">+48 501 439 752</a></p>
                         <p><strong>Email:</strong> <a href="mailto:arpad@arpad.pl" className="hover:underline text-primary">arpad@arpad.pl</a></p>
                     </div>
-                    <ContactForm />
                 </div>
             </div>
         </section>

@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { FileStack, Mail, UsersRound } from 'lucide-react';
 import Link from 'next/link';
-import ContactForm from '@/components/ContactForm';
 import Image from 'next/image';
 import React from 'react';
 
@@ -132,17 +131,16 @@ export default function Home() {
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground font-headline">KONTAKT</h2>
             <p className="mx-auto max-w-[600px] text-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Masz pytania? Chcesz nawiązać współpracę? Wypełnij formularz, a my skontaktujemy się z Tobą najszybciej jak to możliwe.
+              Masz pytania? Chcesz nawiązać współpracę? Skontaktuj się z nami, korzystając z poniższych danych.
             </p>
           </div>
-          <div className="mx-auto w-full max-w-4xl grid md:grid-cols-2 gap-12 mt-8 items-start">
-            <div className="text-left space-y-4 my-auto">
-              <h3 className="text-2xl font-bold text-foreground">Dane kontaktowe</h3>
-              <p><strong>Adres:</strong> Krzykawa 7, 32-329 Bolesław, małopolskie, Polska</p>
-              <p><strong>Telefon:</strong> <a href="tel:+48326424780" className="hover:underline text-primary">+48 32 6424780</a>, <a href="tel:+48501439752" className="hover:underline text-primary">+48 501 439 752</a></p>
-              <p><strong>Email:</strong> <a href="mailto:arpad@arpad.pl" className="hover:underline text-primary">arpad@arpad.pl</a></p>
+          <div className="mx-auto w-full max-w-md mt-8">
+            <div className="text-left space-y-4 p-8 rounded-lg bg-card shadow-lg">
+                <h3 className="text-2xl font-bold text-foreground text-center">Dane kontaktowe</h3>
+                <p><strong>Adres:</strong> Krzykawa 7, 32-329 Bolesław, małopolskie, Polska</p>
+                <p><strong>Telefon:</strong> <a href="tel:+48326424780" className="hover:underline text-primary">+48 32 6424780</a>, <a href="tel:+48501439752" className="hover:underline text-primary">+48 501 439 752</a></p>
+                <p><strong>Email:</strong> <a href="mailto:arpad@arpad.pl" className="hover:underline text-primary">arpad@arpad.pl</a></p>
             </div>
-            <ContactForm />
           </div>
         </div>
       </section>
