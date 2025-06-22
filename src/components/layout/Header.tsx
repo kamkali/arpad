@@ -11,29 +11,40 @@ import React from 'react';
 const ArpadLogo = () => (
   <svg width="240" height="50" viewBox="0 0 240 50" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g>
-      {/* Icon Part */}
+      {/* Icon Part: Faithful recreation of the image */}
       <g transform="skewX(-10)">
-        {/* Dark blue bar */}
-        <path d="M0 0 H 20 V 45 H 0 Z" fill="hsl(var(--primary))" />
-        {/* Light separator bar */}
-        <path d="M24 0 H 32 V 45 H 24 Z" fill="hsl(var(--muted))" />
-        {/* Teal background for 'A' with negative space cutout */}
-        <path 
-          fillRule="evenodd" 
-          clipRule="evenodd" 
-          d="M36,0 H67 C72.5,0 77,4.5 77,10 V 35 C77,40.5 72.5,45 67,45 H 36 V 0 Z M56.5,13 L46.5,35 H50.5 L53,28 H60 L62.5,35 H66.5 L56.5,13 Z M54.5,24 L56.5,20 L58.5,24 H 54.5 Z"
-          fill="hsl(var(--accent))"
-        />
+        {/* Dark back folder */}
+        <path d="M0 0 H 30 V 45 H 0 Z" fill="hsl(var(--primary))" />
+        {/* Light middle folder */}
+        <path d="M15 0 H 45 V 45 H 15 Z" fill="hsl(var(--muted))" opacity="0.6" />
+        {/* Accent front folder */}
+        <path d="M30 0 H 60 C 65.5228 0 70 4.47715 70 10 V 35 C 70 40.5228 65.5228 45 60 45 H 30 V 0 Z" fill="hsl(var(--accent))"/>
+        {/* 'A' Shape on top */}
+        <path d="M57.5,14 L50,35 L54,35 L58.2,25 L62.4,35 L66.4,35 L59.3,14 H57.5Z" fill="hsl(var(--primary-foreground))"/>
       </g>
 
       {/* Text Part */}
-      <g transform="translate(98, 2)">
-        <text x="0" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="600" fill="hsl(var(--primary))">
+      <g transform="translate(105, 2)">
+        <text 
+          x="0" y="28" 
+          fontFamily="Poppins, sans-serif" 
+          fontSize="28" 
+          fontWeight="600" 
+          fill="hsl(var(--primary))"
+          style={{ fontStyle: 'italic', letterSpacing: '-0.5px' }}
+        >
           ARPAD
         </text>
-        <line x1="0" y1="36" x2="115" y2="36" stroke="hsl(var(--secondary))" strokeWidth="1"/>
-        <text x="0" y="48" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="400" fill="hsl(var(--secondary))">
-          sp. z o.o.
+        <line x1="0" y1="36" x2="105" y2="36" stroke="hsl(var(--secondary))" strokeWidth="1"/>
+        <text 
+          x="0" y="48" 
+          fontFamily="Inter, sans-serif" 
+          fontSize="14" 
+          fontWeight="400" 
+          fill="hsl(var(--secondary))"
+          style={{ fontStyle: 'italic' }}
+        >
+          sp. z o.o
         </text>
       </g>
     </g>
