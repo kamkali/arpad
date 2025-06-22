@@ -9,29 +9,29 @@ import { Menu, ArrowRight } from 'lucide-react';
 import React from 'react';
 
 const ArpadLogo = () => (
-    <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(0, 2)">
-        {/* Icon */}
-        <g transform="skewX(-8)">
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M27.5 2C29.1569 2 30.5 3.34315 30.5 5L54 45H1L24.5 5C24.5 3.34315 25.8431 2 27.5 2Z M27.5 22L38 35H17L27.5 22Z"
-            fill="hsl(var(--primary))"
-          />
-        </g>
-        {/* Text */}
-        <g transform="translate(70, 0)">
-          <text x="0" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="600" fill="hsl(var(--primary))">
-            ARPAD
-          </text>
-          <text x="105" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="300" fill="hsl(var(--secondary))">
-            .PL
-          </text>
-        </g>
+  <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(0, 2)">
+      {/* Icon */}
+      <g transform="skewX(-8) translate(5,0)">
+        <path 
+          fillRule="evenodd" 
+          clipRule="evenodd" 
+          d="M32.5 2L0 45H8L32.5 8.5L57 45H65L32.5 2ZM32.5 12.5C29.5 17.5 26 21.5 23 23L27 32H38L42 23C39 21.5 35.5 17.5 32.5 12.5Z" 
+          fill="hsl(var(--primary))"
+        />
       </g>
-    </svg>
-  );
+      {/* Text */}
+      <g transform="translate(75, 0)">
+        <text x="0" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="600" fill="hsl(var(--primary))">
+          ARPAD
+        </text>
+        <text x="105" y="28" fontFamily="Poppins, sans-serif" fontSize="30" fontWeight="300" fill="hsl(var(--secondary))">
+          .PL
+        </text>
+      </g>
+    </g>
+  </svg>
+);
 
 
 export default function Header() {
