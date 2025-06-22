@@ -9,11 +9,14 @@ import { Menu, ArrowRight } from 'lucide-react';
 import React from 'react';
 
 const ArpadLogo = () => (
-    <svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M25.6667 0L0 40H8.55556L30.3333 6.66667L25.6667 0Z" fill="#219EBC"/>
-        <path d="M17.1111 0L42.7778 40H34.2222L12.4444 6.66667L17.1111 0Z" fill="#023047" fillOpacity="0.9"/>
-        <text x="50" y="28" fontFamily="Poppins, sans-serif" fontSize="24" fontWeight="bold" fill="#023047">ARPAD</text>
-    </svg>
+  <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <rect x="0" y="4" width="45" height="32" rx="8" fill="#023047"/>
+      <rect x="8" y="0" width="45" height="32" rx="8" fill="#219EBC"/>
+      <path d="M23 24L30.5 8L38 24M26 18H35" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+    </g>
+    <text x="60" y="28" fontFamily="Poppins, sans-serif" fontSize="24" fontWeight="bold" fill="#023047">ARPAD</text>
+  </svg>
 );
 
 
@@ -21,12 +24,13 @@ export default function Header() {
   const pathname = usePathname();
 
   const navItems = [
+    { href: '/', label: 'Strona Główna' },
     { href: '/o-firmie', label: 'O firmie' },
     { href: '/oferta-2', label: 'Oferta' },
     { href: '/galeria', label: 'Galeria' },
   ];
 
-  const kontaktLink = pathname === '/' ? '#kontakt' : '/#kontakt';
+  const kontaktLink = '/#kontakt';
 
   const [scrolled, setScrolled] = React.useState(false);
 
