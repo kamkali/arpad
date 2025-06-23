@@ -8,57 +8,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ArrowRight } from 'lucide-react';
 import React from 'react';
 
-const ArpadLogo = () => (
-  <svg width="240" height="50" viewBox="0 0 240 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g>
-      {/* Icon Part: Faithful recreation of the image */}
-      <g transform="skewX(-10)">
-        {/* Dark back folder */}
-        <path d="M0 5 H 30 V 50 H 0 Z" fill="hsl(var(--primary))" />
-        {/* Light middle folder */}
-        <path d="M15 2.5 H 45 V 47.5 H 15 Z" fill="hsl(var(--muted))" />
-        {/* Accent front folder */}
-        <path d="M30 0 H 60 C 65.5228 0 70 4.47715 70 10 V 35 C 70 40.5228 65.5228 45 60 45 H 30 V 0 Z" fill="hsl(var(--accent))"/>
-        {/* 'A' Shape on top */}
-        <text
-            x="50" y="32"
-            fontFamily="Poppins, sans-serif"
-            fontSize="24"
-            fontWeight="600"
-            fill="hsl(var(--primary-foreground))"
-            textAnchor="middle"
-        >A</text>
-      </g>
-
-      {/* Text Part */}
-      <g transform="translate(115, 2)">
-        <text 
-          x="0" y="28" 
-          fontFamily="Poppins, sans-serif" 
-          fontSize="28" 
-          fontWeight="600" 
-          fill="hsl(var(--primary))"
-          style={{ letterSpacing: '-0.5px' }}
-        >
-          ARPAD
-        </text>
-        <line x1="0" y1="36" x2="105" y2="36" stroke="hsl(var(--accent))" strokeWidth="1.5"/>
-        <text 
-          x="0" y="48" 
-          fontFamily="Inter, sans-serif" 
-          fontSize="14" 
-          fontWeight="400" 
-          fill="hsl(var(--secondary))"
-          style={{ letterSpacing: '0.1em' }}
-        >
-          sp. z o.o.
-        </text>
-      </g>
-    </g>
-  </svg>
-);
-
-
 export default function Header() {
   const pathname = usePathname();
 
@@ -90,8 +39,14 @@ export default function Header() {
       scrolled ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
     )}>
       <div className="container px-4 md:px-6 flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <ArpadLogo />
+        <Link
+          href="/"
+          className={cn(
+            "flex items-center font-headline text-3xl font-bold tracking-tight transition-colors",
+            scrolled ? "text-primary" : "text-primary-foreground"
+          )}
+        >
+          ARPAD
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-base font-medium">
           {navItems.map((item) => (
