@@ -14,37 +14,44 @@ const ArpadLogo = () => (
       {/* Icon Part: Faithful recreation of the image */}
       <g transform="skewX(-10)">
         {/* Dark back folder */}
-        <path d="M0 0 H 30 V 45 H 0 Z" fill="hsl(var(--primary))" />
+        <path d="M0 5 H 30 V 50 H 0 Z" fill="hsl(var(--primary))" />
         {/* Light middle folder */}
-        <path d="M15 0 H 45 V 45 H 15 Z" fill="hsl(var(--muted))" opacity="0.6" />
+        <path d="M15 2.5 H 45 V 47.5 H 15 Z" fill="hsl(var(--muted))" />
         {/* Accent front folder */}
         <path d="M30 0 H 60 C 65.5228 0 70 4.47715 70 10 V 35 C 70 40.5228 65.5228 45 60 45 H 30 V 0 Z" fill="hsl(var(--accent))"/>
         {/* 'A' Shape on top */}
-        <path d="M57.5,14 L50,35 L54,35 L58.2,25 L62.4,35 L66.4,35 L59.3,14 H57.5Z" fill="hsl(var(--primary-foreground))"/>
+        <text
+            x="50" y="32"
+            fontFamily="Poppins, sans-serif"
+            fontSize="24"
+            fontWeight="600"
+            fill="hsl(var(--primary-foreground))"
+            textAnchor="middle"
+        >A</text>
       </g>
 
       {/* Text Part */}
-      <g transform="translate(105, 2)">
+      <g transform="translate(115, 2)">
         <text 
           x="0" y="28" 
           fontFamily="Poppins, sans-serif" 
           fontSize="28" 
           fontWeight="600" 
           fill="hsl(var(--primary))"
-          style={{ fontStyle: 'italic', letterSpacing: '-0.5px' }}
+          style={{ letterSpacing: '-0.5px' }}
         >
           ARPAD
         </text>
-        <line x1="0" y1="36" x2="105" y2="36" stroke="hsl(var(--secondary))" strokeWidth="1"/>
+        <line x1="0" y1="36" x2="105" y2="36" stroke="hsl(var(--accent))" strokeWidth="1.5"/>
         <text 
           x="0" y="48" 
           fontFamily="Inter, sans-serif" 
           fontSize="14" 
           fontWeight="400" 
           fill="hsl(var(--secondary))"
-          style={{ fontStyle: 'italic' }}
+          style={{ letterSpacing: '0.1em' }}
         >
-          sp. z o.o
+          sp. z o.o.
         </text>
       </g>
     </g>
