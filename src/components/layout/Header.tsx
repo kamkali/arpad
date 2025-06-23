@@ -44,7 +44,7 @@ export default function Header() {
           href="/"
           className="flex items-center"
         >
-          <ArpadLogo className={cn(scrolled ? "text-primary" : "text-primary-foreground")} />
+          <ArpadLogo />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-base font-medium">
           {navItems.map((item) => (
