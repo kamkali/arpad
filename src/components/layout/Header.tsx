@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ArrowRight } from 'lucide-react';
 import React from 'react';
+import ArpadLogo from './ArpadLogo';
 
 export default function Header() {
   const pathname = usePathname();
@@ -41,12 +42,9 @@ export default function Header() {
       <div className="container px-4 md:px-6 flex h-20 items-center justify-between">
         <Link
           href="/"
-          className={cn(
-            "flex items-center font-headline text-3xl font-bold tracking-tight transition-colors",
-            scrolled ? "text-primary" : "text-primary-foreground"
-          )}
+          className="flex items-center"
         >
-          ARPAD
+          <ArpadLogo className={cn(scrolled ? "text-primary" : "text-primary-foreground")} />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-base font-medium">
           {navItems.map((item) => (
