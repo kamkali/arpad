@@ -1,6 +1,7 @@
 import OnScrollAnimator from '@/components/OnScrollAnimator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2, Milestone } from 'lucide-react';
+import ContactDetails from '@/components/layout/ContactDetails';
 
 const liquidatedCompanies = [
     'Przedsiębiorstwo Produkcyjno-Handlowe "ORION" Spółka z o. o. w upadłości w Tarnowskich Górach',
@@ -116,6 +117,22 @@ export default function OFirmiePage() {
             </OnScrollAnimator>
         </article>
       </div>
+
+      <section id="kontakt" className="w-full py-16 md:py-24 bg-muted/50">
+        <div className="container px-4 md:px-6">
+            <OnScrollAnimator>
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
+                        Porozmawiajmy o Twoich Potrzebach
+                    </h2>
+                    <p className="mt-4 text-lg text-foreground/70">
+                        Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
+                    </p>
+                </div>
+            </OnScrollAnimator>
+            <ContactDetails />
+        </div>
+      </section>
     </div>
   );
 }

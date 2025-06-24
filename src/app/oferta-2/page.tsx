@@ -1,24 +1,25 @@
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Ambulance, ArrowRight, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench, ArchiveRestore } from "lucide-react";
+import { Ambulance, ArrowRight, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import ContactDetails from "@/components/layout/ContactDetails";
 
 const services = [
-    { icon: <Building />, title: "Organizacja archiwów", description: "Tworzenie i kompleksowe wdrażanie archiwów zakładowych i składnic akt od podstaw." },
-    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Projektowanie i wdrażanie instrukcji kancelaryjno-archiwalnych, gwarantujących porządek." },
-    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Stała lub okresowa pomoc w prowadzeniu archiwów, zapewniająca ciągłość i zgodność z przepisami." },
-    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Profesjonalne szkolenia, które podnoszą kompetencje i świadomość personelu." },
-    { icon: <Database />, title: "Elektroniczna ewidencja", description: "Implementacja nowoczesnych systemów do zarządzania i ewidencji zasobów cyfrowych." },
-    { icon: <FileStack />, title: "Opracowanie zasobów", description: "Profesjonalna systematyzacja, klasyfikacja i kwalifikacja dokumentacji dla pełnej kontroli." },
-    { icon: <Landmark />, title: "Akta dla archiwów państwowych", description: "Kompleksowe przygotowanie materiałów archiwalnych (kat. „A”) do przekazania państwowym organom." },
-    { icon: <ArchiveRestore />, title: "Przekazywanie do depozytu", description: "Bezpieczne przygotowanie i przekazanie akt do wskazanych archiwów depozytowych." },
-    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Bezpieczne i długoterminowe przechowywanie dokumentacji, w tym pracowniczej." },
-    { icon: <Trash2 />, title: "Brakowanie i niszczenie", description: "Zgodne z prawem brakowanie i utylizacja dokumentacji, której okres przechowywania minął." },
+    { icon: <Building />, title: "Organizacja archiwów i składnic", description: "Organizację, zakładanie archiwów zakładowych i zakładowych składnic akt." },
+    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Opracowywanie normatywów kancelaryjno-archiwalnych, w tym jednolitych rzeczowych wykazów akt." },
+    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Bieżącą obsługę archiwów zakładowych i składnic akt." },
+    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Szkolenia dla pracowników odpowiedzialnych za archiwa zakładowe i składnice." },
+    { icon: <Database />, title: "Wdrażanie systemów ewidencji", description: "Wdrażanie elektronicznych systemów ewidencji zasobu archiwów i składnic." },
+    { icon: <FileStack />, title: "Opracowanie zasobów aktowych", description: "Opracowanie archiwalne zasobów aktowych (systematyzacja, klasyfikacja, kwalifikacja, ewidencja)." },
+    { icon: <Landmark />, title: "Akta dla archiwów państwowych", description: "Przygotowywanie materiałów archiwalnych (akta kat. „A”) do przekazania do archiwów państwowych." },
+    { icon: <FolderLock />, title: "Przekazywanie do depozytu", description: "Przygotowywanie i przekazywanie akt do przechowywania we wskazanych archiwach depozytowych." },
+    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Przechowywanie akt (w tym dokumentacji pracowniczej)." },
+    { icon: <Trash2 />, title: "Brakowanie i niszczenie dokumentacji", description: "Brakowanie dokumentacji niearchiwalnej oraz niszczenie akt, których okres przechowywania upłynął." },
     { icon: <Ambulance />, title: "Pogotowie Archiwistyczne", description: "Nagła pomoc w kryzysowych sytuacjach, gdy liczy się czas, precyzja i natychmiastowe działanie." },
-    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Elastyczne rozwiązania dopasowane do nietypowych i specyficznych potrzeb Twojej organizacji." },
+    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Inne usługi związane z działalnością archiwów." },
 ];
 
 export default function OfertaPage() {
@@ -31,7 +32,7 @@ export default function OfertaPage() {
                 Nasza Oferta
                 </h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-primary-foreground/80">
-                Nasza firma oferuje usługi obejmujące pełny zakres prac archiwistycznych. Naszą ofertę kierujemy zarówno do podmiotów istniejących, jak i tych w trakcie postępowania upadłościowego lub likwidacji.
+                Od ponad ćwierć wieku zapewniamy kompleksowe i bezpieczne rozwiązania archiwistyczne dla firm i instytucji. Nasze usługi, od tworzenia archiwów po niszczenie dokumentacji, gwarantują pełną zgodność z prawem i optymalizację procesów. Obsługujemy zarówno działające przedsiębiorstwa, jak i podmioty w trakcie restrukturyzacji lub likwidacji, dostosowując ofertę do indywidualnych potrzeb.
                 </p>
             </div>
         </OnScrollAnimator>
@@ -43,7 +44,7 @@ export default function OfertaPage() {
                 <div className="text-center max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">Zakres Usług</h2>
                      <p className="mt-4 text-lg text-foreground/70">
-                        Świadczymy pełen wachlarz usług, od tworzenia archiwów po bezpieczne niszczenie dokumentacji. W szczególności:
+                        Nasza firma oferuje usługi obejmujące pełny zakres prac archiwistycznych. Naszą ofertę kierujemy zarówno do podmiotów istniejących jak również dla tych, które znajdują się w trakcie postępowania upadłościowego lub w likwidacji. W szczególności:
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -217,20 +218,20 @@ export default function OfertaPage() {
             </section>
         </OnScrollAnimator>
 
-         <section id="kontakt" className="mt-20 md:mt-28">
-            <OnScrollAnimator>
-                <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">Porozmawiajmy o Twoich Potrzebach</h2>
-                    <p className="mt-4 text-lg text-foreground/70">
-                        Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
-                    </p>
-                    <div className="mt-8">
-                       <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                           <Link href="/kontakt">Przejdź do kontaktu <ArrowRight className="ml-2" /></Link>
-                       </Button>
-                   </div>
-                </div>
-            </OnScrollAnimator>
+        <section id="kontakt" className="w-full py-16 md:py-24 bg-muted/50 mt-20 md:mt-28">
+            <div className="container px-4 md:px-6">
+                <OnScrollAnimator>
+                    <div className="text-center max-w-3xl mx-auto mb-12">
+                        <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
+                            Porozmawiajmy o Twoich Potrzebach
+                        </h2>
+                        <p className="mt-4 text-lg text-foreground/70">
+                            Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
+                        </p>
+                    </div>
+                </OnScrollAnimator>
+                <ContactDetails />
+            </div>
         </section>
       </div>
     </div>
