@@ -191,10 +191,10 @@ export default function Home() {
               <OnScrollAnimator>
                   <div className="text-center max-w-3xl mx-auto mb-12">
                       <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
-                          Gotów na Porządek i Bezpieczeństwo?
+                          Twoje Archiwum pod Profesjonalną Ochroną
                       </h2>
                       <p className="mt-4 text-lg text-foreground/70">
-                          Dołącz do setek zadowolonych klientów i zaufaj naszemu doświadczeniu. Skontaktuj się z nami, aby otrzymać indywidualną, niezobowiązującą wycenę i zapewnij swojej firmie najwyższy standard zarządzania dokumentacją.
+                          Ponad ćwierć wieku doświadczenia i setki zaufanych partnerów to nasza gwarancja niezawodności. Skontaktuj się z nami, aby omówić, jak możemy wesprzeć Twój biznes poprzez strategiczne zarządzanie dokumentacją i otrzymać niezobowiązującą wycenę.
                       </p>
                   </div>
               </OnScrollAnimator>
