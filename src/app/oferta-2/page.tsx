@@ -37,7 +37,7 @@ export default function OfertaPage() {
                 Nasza Oferta
                 </h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-primary-foreground/80">
-                Kompleksowe usługi archiwizacyjne dopasowane do indywidualnych potrzeb Twojej firmy. Sprawdź, jak możemy Ci pomóc.
+                Oferujemy pełny zakres prac archiwistycznych. Naszą ofertę kierujemy zarówno do podmiotów istniejących, jak i tych w trakcie postępowania upadłościowego lub likwidacji.
                 </p>
             </div>
         </OnScrollAnimator>
@@ -79,7 +79,7 @@ export default function OfertaPage() {
                  <div className="text-center max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">Wycena Usługi</h2>
                     <p className="mt-4 text-lg text-foreground/70">
-                        Informacja handlowa dotycząca usług archiwizacji i przechowywania dokumentacji. Podane ceny są cenami netto i podlegają indywidualnej negocjacji.
+                        Szczegółową, indywidualną ofertę z podaniem cen usług przedstawiamy po zapoznaniu się z przedmiotem i zakresem zamówienia. Podane niżej ceny są orientacyjne i podlegają negocjacji.
                     </p>
                 </div>
                 <Card className="overflow-x-auto mt-12">
