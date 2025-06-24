@@ -149,6 +149,13 @@ export default function Home() {
               </OnScrollAnimator>
             ))}
           </div>
+          <div className="mt-16 text-center">
+            <OnScrollAnimator>
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Link href="/oferta-2">Zobacz pełną ofertę <ArrowRight className="ml-2" /></Link>
+                </Button>
+            </OnScrollAnimator>
+          </div>
         </div>
       </section>
 
