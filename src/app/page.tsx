@@ -1,7 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, FileStack, FolderLock, Trash2 } from 'lucide-react';
+import { ArrowRight, Medal, ShieldCheck, TrendingDown } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import OnScrollAnimator from '@/components/OnScrollAnimator';
@@ -12,17 +12,17 @@ export default function Home() {
 
   const services = [
     {
-      icon: <FileStack className="h-10 w-10 text-accent" />,
+      icon: <TrendingDown className="h-10 w-10 text-accent" />,
       title: 'Archiwizacja i Porządkowanie',
       description: 'Odzyskaj pełną kontrolę nad dokumentacją. Nasz zespół profesjonalnie zorganizuje, sklasyfikuje i zaewidencjonuje Twoje akta, zapewniając zgodność z przepisami i błyskawiczny dostęp do informacji.',
     },
     {
-      icon: <FolderLock className="h-10 w-10 text-accent" />,
+      icon: <ShieldCheck className="h-10 w-10 text-accent" />,
       title: 'Bezpieczne Przechowywanie',
       description: 'Gwarantujemy bezpieczne przechowywanie dokumentacji pracowniczej i firmowej przez wymagany prawem okres. Nasze magazyny spełniają najwyższe normy bezpieczeństwa.',
     },
     {
-      icon: <Trash2 className="h-10 w-10 text-accent" />,
+      icon: <Medal className="h-10 w-10 text-accent" />,
       title: 'Niszczenie i Zgodność z RODO',
       description: 'Zapewniamy poufne i certyfikowane niszczenie dokumentów. Oferujemy także pełne wsparcie w zakresie zgodności z RODO, chroniąc Twoją firmę przed ryzykiem.',
     },
@@ -105,7 +105,7 @@ export default function Home() {
                 <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                   <AnimatedCounter to={500} suffix="+" />
                 </h3>
-                <p className="mt-2 text-lg font-medium text-foreground/80">Firm i instytucji</p>
+                <p className="mt-2 text-lg font-medium text-foreground/80">Zadowolonych klientów</p>
               </div>
             </OnScrollAnimator>
             <OnScrollAnimator delay={0.4}>
@@ -113,7 +113,7 @@ export default function Home() {
                 <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                   <AnimatedCounter to={100} suffix="%" />
                 </h3>
-                <p className="mt-2 text-lg font-medium text-foreground/80">zgodności z RODO i prawem</p>
+                <p className="mt-2 text-lg font-medium text-foreground/80">Zgodności z RODO i prawem</p>
               </div>
             </OnScrollAnimator>
           </div>
@@ -191,10 +191,10 @@ export default function Home() {
               <OnScrollAnimator>
                   <div className="text-center max-w-3xl mx-auto mb-12">
                       <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
-                      Twoje Archiwum w Rękach Profesjonalistów
+                          Zapewnij Swojej Firmie Niezawodne Partnerstwo
                       </h2>
                       <p className="mt-4 text-lg text-foreground/70">
-                      Zaufaj ponad 25-letniemu doświadczeniu i dołącz do grona naszych partnerów. Skontaktuj się z nami, aby omówić, jak możemy wesprzeć Twój biznes i otrzymać niezobowiązującą wycenę. Jesteśmy gotowi, by wprowadzić porządek i bezpieczeństwo w Twojej dokumentacji.
+                          Zaufaj ponad 25-letniemu doświadczeniu i dołącz do grona naszych partnerów. Skontaktuj się z nami, aby omówić, jak możemy wesprzeć Twój biznes i otrzymać niezobowiązującą wycenę. Jesteśmy gotowi, by wprowadzić porządek i bezpieczeństwo w Twojej dokumentacji.
                       </p>
                   </div>
               </OnScrollAnimator>
