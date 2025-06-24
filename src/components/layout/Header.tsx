@@ -19,7 +19,7 @@ export default function Header() {
     { href: '/galeria', label: 'Galeria' },
   ];
 
-  const kontaktLink = '/#kontakt';
+  const kontaktLink = '/oferta-2#kontakt';
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 

@@ -5,22 +5,21 @@ import { Ambulance, ArchiveRestore, Building, Database, FileCog, FileStack, Fold
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import ContactForm from "@/components/ContactForm";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const services = [
-    { icon: <Building />, title: "Organizacja archiwów", description: "Organizację, zakładanie archiwów zakładowych i zakładowych składnic akt." },
-    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Opracowywanie normatywów kancelaryjno-archiwalnych, w tym jednolitych rzeczowych wykazów akt." },
-    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Bieżącą obsługę archiwów zakładowych i składnic akt." },
-    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Szkolenia dla pracowników odpowiedzialnych za archiwa zakładowe i składnice." },
-    { icon: <Database />, title: "Elektroniczna ewidencja", description: "Wdrażanie elektronicznych systemów ewidencji zasobu archiwów i składnic." },
-    { icon: <FileStack />, title: "Opracowanie zasobów", description: "Opracowanie archiwalne zasobów aktowych (systematyzacja strukturalna, klasyfikacja rzeczowa. kwalifikacja archiwalna, sporządzanie ewidencji w formie baz danych)." },
-    { icon: <Landmark />, title: "Akta dla archiwów państwowych", description: "Przygotowywanie materiałów archiwalnych (akta kategorii „A”) do przekazania do archiwów państwowych." },
-    { icon: <ArchiveRestore />, title: "Przekazywanie do depozytu", description: "Przygotowywanie do przekazania i przekazywanie akt do przechowywania we wskazanych archiwach depozytowych." },
-    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Przechowywanie akt (w tym dokumentacji pracowniczej)." },
-    { icon: <Trash2 />, title: "Brakowanie i niszczenie", description: "Brakowanie dokumentacji niearchiwalnej oraz niszczenie akt, których okres przechowywania upłynął." },
+    { icon: <Building />, title: "Organizacja archiwów", description: "Tworzenie i kompleksowe wdrażanie archiwów zakładowych i składnic akt od podstaw." },
+    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Projektowanie i wdrażanie instrukcji kancelaryjno-archiwalnych, gwarantujących porządek." },
+    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Stała lub okresowa pomoc w prowadzeniu archiwów, zapewniająca ciągłość i zgodność z przepisami." },
+    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Profesjonalne szkolenia, które podnoszą kompetencje i świadomość personelu." },
+    { icon: <Database />, title: "Elektroniczna ewidencja", description: "Implementacja nowoczesnych systemów do zarządzania i ewidencji zasobów cyfrowych." },
+    { icon: <FileStack />, title: "Opracowanie zasobów", description: "Profesjonalna systematyzacja, klasyfikacja i kwalifikacja dokumentacji dla pełnej kontroli." },
+    { icon: <Landmark />, title: "Akta dla archiwów państwowych", description: "Kompleksowe przygotowanie materiałów archiwalnych (kat. „A”) do przekazania państwowym organom." },
+    { icon: <ArchiveRestore />, title: "Przekazywanie do depozytu", description: "Bezpieczne przygotowanie i przekazanie akt do wskazanych archiwów depozytowych." },
+    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Bezpieczne i długoterminowe przechowywanie dokumentacji, w tym pracowniczej." },
+    { icon: <Trash2 />, title: "Brakowanie i niszczenie", description: "Zgodne z prawem brakowanie i utylizacja dokumentacji, której okres przechowywania minął." },
     { icon: <Ambulance />, title: "Pogotowie Archiwistyczne", description: "Nagła pomoc w kryzysowych sytuacjach, gdy liczy się czas, precyzja i natychmiastowe działanie." },
-    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Inne usługi związane z działalnością archiwów." },
+    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Elastyczne rozwiązania dopasowane do nietypowych i specyficznych potrzeb Twojej organizacji." },
 ];
 
 export default function OfertaPage() {
@@ -91,37 +90,37 @@ export default function OfertaPage() {
 
                             <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „B10 – B5 – B3 - B2”</TableCell><TableCell className="text-right"></TableCell></TableRow>
                             <TableRow><TableCell className="pl-12">Dokumentacja finansowo-księgowa i obrotu gospodarczego</TableCell><TableCell className="text-right"></TableCell></TableRow>
-                            <TableRow><TableCell className="pl-16">Opracowanie akt niezarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie akt zarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie z wywozem i zniszczeniem</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Opracowanie akt niezarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie akt zarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie z wywozem i zniszczeniem</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
                             
                             <TableRow><TableCell className="pl-12">Dokumentacja działalności podstawowej urzędów i podmiotów gospodarczych</TableCell><TableCell className="text-right"></TableCell></TableRow>
-                            <TableRow><TableCell className="pl-16">Opracowanie akt niezarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie akt zarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie z wywozem i zniszczeniem</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Opracowanie akt niezarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie akt zarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie z wywozem i zniszczeniem</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
 
                             <TableRow><TableCell className="pl-8 font-medium">Dokumentacja pracownicza kategorii „B50– B10 – B5 – B2”</TableCell><TableCell className="text-right"></TableCell></TableRow>
-                             <TableRow><TableCell className="pl-12">Kategorii „B50-B10-B5” (dokumentacja płacowa)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                             <TableRow><TableCell className="pl-12">Zbiorcze karty wynagrodzeń i zasiłkowe (ułożenie)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                             <TableRow><TableCell className="pl-12">Zbiorcze karty wynagrodzeń (założenie teczki płacowej)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 teczkę</TableCell></TableRow>
-                             <TableRow><TableCell className="pl-12">Kategorii „BE50 - B50” (dokumentacja osobowa)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 teczkę</TableCell></TableRow>
-                             <TableRow><TableCell className="pl-12">Kategorii „B50-B25-B10-B5” (kadrowo-administracyjna)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Kategorii „B50-B10-B5” (dokumentacja płacowa)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Zbiorcze karty wynagrodzeń i zasiłkowe (ułożenie)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Zbiorcze karty wynagrodzeń (założenie teczki płacowej)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Kategorii „BE50 - B50” (dokumentacja osobowa)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Kategorii „B50-B25-B10-B5” (kadrowo-administracyjna)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
 
-                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „B25”</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „A” (wraz z przygotowaniem do archiwum państwowego)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii wyższej niż "B10" oraz "BE" w organach administracji</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „BE5 - B5” (inwestycje i remonty)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8 font-medium">Dokumentacja realizacji robót budowlanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „B25”</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „A” (wraz z przygotowaniem do archiwum państwowego)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii wyższej niż "B10" oraz "BE" w organach administracji</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „BE5 - B5” (inwestycje i remonty)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Dokumentacja realizacji robót budowlanych</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
                             
                             <TableRow><TableCell colSpan={2} className="font-bold bg-primary/5 text-primary">2. Opracowanie archiwalne dokumentacji technicznej</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8 font-medium">Inwestycyjna (kategorii „A – B25”)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8 font-medium">Inwestycyjna (kategorii „BE5-B5”)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8 font-medium">Konstrukcyjna i technologiczna (kategorii „A-B25”)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8 font-medium">Konstrukcyjna i technologiczna (kategorii „B”)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Inwestycyjna (kategorii „A – B25”)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Inwestycyjna (kategorii „BE5-B5”)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Konstrukcyjna i technologiczna (kategorii „A-B25”)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Konstrukcycyjna i technologiczna (kategorii „B”)</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
 
                              <TableRow><TableCell colSpan={2} className="font-bold bg-primary/5 text-primary">3. Inne prace dodatkowe i opracowania</TableCell></TableRow>
-                             <TableRow><TableCell className="pl-8 font-medium">Prace dodatkowe na godziny</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 godz. roboczą</TableCell></TableRow>
-                             <TableRow><TableCell className="pl-8 font-medium">Opracowanie projektów normatywów kancelaryjno–archiwalnych</TableCell><TableCell className="text-right">Cena do uzgodnienia za projekt/komplet</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-8 font-medium">Prace dodatkowe na godziny</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-8 font-medium">Opracowanie projektów normatywów kancelaryjno–archiwalnych</TableCell><TableCell className="text-right">Cena do uzgodnienia</TableCell></TableRow>
                              <TableRow><TableCell className="pl-8 font-medium">Opracowanie innych rodzajów dokumentacji (geodezyjna, foto, itp.)</TableCell><TableCell className="text-right">Cena umowna</TableCell></TableRow>
                         </TableBody>
                     </Table>
@@ -224,11 +223,51 @@ export default function OfertaPage() {
                 <div className="text-center max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">Porozmawiajmy o Twoich Potrzebach</h2>
                     <p className="mt-4 text-lg text-foreground/70">
-                    Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
+                        Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
                     </p>
                 </div>
-                <div className="mt-12 max-w-lg mx-auto">
-                    <ContactForm />
+                <div className="mt-12 max-w-4xl mx-auto">
+                   <Card>
+                       <CardContent className="p-6 md:p-10">
+                            <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                                <div className="flex flex-col items-center md:items-start space-y-2">
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-accent/10 rounded-full p-3 text-accent">
+                                            <MapPin className="h-6 w-6" />
+                                        </div>
+                                        <h3 className="text-xl font-bold font-headline text-primary">Adres</h3>
+                                    </div>
+                                    <div className="pl-0 md:pl-16">
+                                        <p className="text-foreground/80">Krzykawa 7</p>
+                                        <p className="text-foreground/80">32-329 Bolesław</p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col items-center md:items-start space-y-2">
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-accent/10 rounded-full p-3 text-accent">
+                                            <Phone className="h-6 w-6" />
+                                        </div>
+                                        <h3 className="text-xl font-bold font-headline text-primary">Telefon</h3>
+                                    </div>
+                                    <div className="pl-0 md:pl-16 flex flex-col items-center md:items-start">
+                                        <a href="tel:+48326424780" className="text-foreground/80 hover:text-accent transition-colors">Tel: +48 32 642 47 80</a>
+                                        <a href="tel:+48501439752" className="text-foreground/80 hover:text-accent transition-colors">Kom: +48 501 439 752</a>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col items-center md:items-start space-y-2">
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-accent/10 rounded-full p-3 text-accent">
+                                            <Mail className="h-6 w-6" />
+                                        </div>
+                                        <h3 className="text-xl font-bold font-headline text-primary">Email</h3>
+                                    </div>
+                                     <div className="pl-0 md:pl-16">
+                                        <a href="mailto:arpad@arpad.pl" className="text-foreground/80 hover:text-accent transition-colors">arpad@arpad.pl</a>
+                                    </div>
+                                </div>
+                            </div>
+                       </CardContent>
+                   </Card>
                 </div>
             </OnScrollAnimator>
         </section>

@@ -184,13 +184,13 @@ export default function Home() {
       <section id="kontakt" className="w-full py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container px-4 md:px-6 text-center">
           <OnScrollAnimator>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Skontaktuj się z nami</h2>
-            <p className="mt-4 mx-auto max-w-2xl text-lg text-primary-foreground/80">
-              Masz pytania lub chcesz rozpocząć współpracę? Jesteśmy do Twojej dyspozycji. Wypełnij formularz kontaktowy, a my skontaktujemy się z Tobą, aby przygotować bezpłatną wycenę.
+            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Porozmawiajmy o Twoich Potrzebach</h2>
+             <p className="mt-4 mx-auto max-w-2xl text-lg text-primary-foreground/80">
+                Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
             </p>
             <div className="mt-8">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="/oferta-2#kontakt">Wypełnij formularz kontaktowy <ArrowRight className="ml-2" /></Link>
+                    <Link href="/oferta-2#kontakt">Sprawdź dane kontaktowe <ArrowRight className="ml-2" /></Link>
                 </Button>
             </div>
           </OnScrollAnimator>
