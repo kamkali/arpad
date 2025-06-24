@@ -1,17 +1,21 @@
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Building, FileCog, FileStack, FolderLock, Scale, ShieldCheck, Wrench } from "lucide-react";
+import { ArchiveRestore, Building, Database, FileCog, FileStack, FolderLock, PackageCheck, PlusCircle, Scale, ShieldCheck, Users, Wrench } from "lucide-react";
 
 const services = [
-    { icon: <Building />, title: "Organizacja archiwów zakładowych", description: "Tworzymy struktury archiwów od podstaw, zapewniając porządek i logikę." },
-    { icon: <FileCog />, title: "Opracowanie normatywów", description: "Przygotowujemy instrukcje kancelaryjne i archiwalne zgodne z przepisami." },
-    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Zapewniamy stały nadzór i zarządzanie bieżącą dokumentacją." },
-    { icon: <Briefcase />, title: "Szkolenia dla pracowników", description: "Podnosimy kompetencje Twojego zespołu w zakresie zarządzania dokumentami." },
-    { icon: <FileStack />, title: "Opracowanie zasobów aktowych", description: "Porządkujemy, klasyfikujemy i ewidencjonujemy zgromadzone dokumenty." },
-    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Bezpiecznie przechowujemy dokumentację, w tym akta osobowe i płacowe." },
-    { icon: <Scale />, title: "Brakowanie i niszczenie", description: "Realizujemy proces niszczenia dokumentacji zgodnie z protokołem i przepisami." },
-    { icon: <ShieldCheck />, title: "Pogotowie Archiwistyczne", description: "Szybko interweniujemy w nagłych przypadkach, chroniąc Twoje dokumenty." },
+    { icon: <Building />, title: "Organizacja i zakładanie archiwów", description: "Organizację, zakładanie archiwów zakładowych i zakładowych składnic akt." },
+    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Opracowywanie normatywów kancelaryjno-archiwalnych, w tym jednolitych rzeczowych wykazów akt." },
+    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Bieżącą obsługę archiwów zakładowych i składnic akt." },
+    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Szkolenia dla pracowników odpowiedzialnych za archiwa zakładowe i składnice." },
+    { icon: <Database />, title: "Elektroniczna ewidencja zasobu", description: "Wdrażanie elektronicznych systemów ewidencji zasobu archiwów i składnic." },
+    { icon: <FileStack />, title: "Opracowanie zasobów aktowych", description: "Opracowanie archiwalne zasobów aktowych (systematyzacja strukturalna, klasyfikacja rzeczowa. kwalifikacja archiwalna, sporządzanie ewidencji w formie baz danych)." },
+    { icon: <PackageCheck />, title: "Akta dla archiwów państwowych", description: "Przygotowywanie materiałów archiwalnych (akta kategorii „A”) do przekazania do archiwów państwowych." },
+    { icon: <ArchiveRestore />, title: "Przekazywanie akt do depozytu", description: "Przygotowywanie do przekazania i przekazywanie akt do przechowywania we wskazanych archiwach depozytowych." },
+    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Przechowywanie akt ( w tym dokumentacji pracowniczej)." },
+    { icon: <Scale />, title: "Brakowanie i niszczenie dokumentacji", description: "Brakowanie dokumentacji niearchiwalnej oraz niszczenie akt których okres przechowywania upłynął." },
+    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Inne usługi związane z działalnością archiwów." },
+    { icon: <ShieldCheck />, title: "Pogotowie Archiwistyczne", description: "Pogotowie Archiwistyczne." },
 ];
 
 const liquidatedCompanies = [
