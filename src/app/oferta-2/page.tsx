@@ -1,7 +1,7 @@
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArchiveRestore, Building, Database, FileCog, FileStack, FolderLock, PackageCheck, PlusCircle, Scale, ShieldCheck, Users, Wrench } from "lucide-react";
+import { Ambulance, ArchiveRestore, Building, Database, FileCog, FileStack, FolderLock, PackageCheck, PlusCircle, Scale, Users, Wrench } from "lucide-react";
 
 const services = [
     { icon: <Building />, title: "Organizacja i zakładanie archiwów", description: "Organizację, zakładanie archiwów zakładowych i zakładowych składnic akt." },
@@ -14,8 +14,8 @@ const services = [
     { icon: <ArchiveRestore />, title: "Przekazywanie akt do depozytu", description: "Przygotowywanie do przekazania i przekazywanie akt do przechowywania we wskazanych archiwach depozytowych." },
     { icon: <FolderLock />, title: "Przechowywanie akt", description: "Przechowywanie akt ( w tym dokumentacji pracowniczej)." },
     { icon: <Scale />, title: "Brakowanie i niszczenie dokumentacji", description: "Brakowanie dokumentacji niearchiwalnej oraz niszczenie akt których okres przechowywania upłynął." },
+    { icon: <Ambulance />, title: "Pogotowie Archiwistyczne", description: "" },
     { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Inne usługi związane z działalnością archiwów." },
-    { icon: <ShieldCheck />, title: "Pogotowie Archiwistyczne", description: "Pogotowie Archiwistyczne." },
 ];
 
 const liquidatedCompanies = [
@@ -63,7 +63,9 @@ export default function OfertaPage() {
                                     <CardTitle className="font-headline text-lg pt-2">{service.title}</CardTitle>
                                 </CardHeader>
                                 <CardContent className="flex-grow">
-                                    <p className="text-sm text-foreground/70">{service.description}</p>
+                                    {service.description && (
+                                        <p className="text-sm text-foreground/70">{service.description}</p>
+                                    )}
                                 </CardContent>
                             </Card>
                         </OnScrollAnimator>
