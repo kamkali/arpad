@@ -187,10 +187,10 @@ export default function Home() {
               <OnScrollAnimator>
                   <div className="text-center max-w-3xl mx-auto mb-12">
                       <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
-                          Porozmawiajmy o Twoich Potrzebach
+                          Gotów na Porządek i Bezpieczeństwo?
                       </h2>
                       <p className="mt-4 text-lg text-foreground/70">
-                          Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
+                          Dołącz do setek zadowolonych klientów i zaufaj naszemu doświadczeniu. Skontaktuj się z nami, aby otrzymać indywidualną, niezobowiązującą wycenę i zapewnij swojej firmie najwyższy standard zarządzania dokumentacją.
                       </p>
                   </div>
               </OnScrollAnimator>
