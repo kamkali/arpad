@@ -1,21 +1,21 @@
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Ambulance, ArchiveRestore, Building, Database, FileCog, FileStack, FolderLock, PackageCheck, PlusCircle, Scale, Users, Wrench } from "lucide-react";
+import { Ambulance, ArchiveRestore, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench } from "lucide-react";
 
 const services = [
-    { icon: <Building />, title: "Organizacja i zakładanie archiwów", description: "Organizację, zakładanie archiwów zakładowych i zakładowych składnic akt." },
-    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Opracowywanie normatywów kancelaryjno-archiwalnych, w tym jednolitych rzeczowych wykazów akt." },
-    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Bieżącą obsługę archiwów zakładowych i składnic akt." },
-    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Szkolenia dla pracowników odpowiedzialnych za archiwa zakładowe i składnice." },
-    { icon: <Database />, title: "Elektroniczna ewidencja zasobu", description: "Wdrażanie elektronicznych systemów ewidencji zasobu archiwów i składnic." },
-    { icon: <FileStack />, title: "Opracowanie zasobów aktowych", description: "Opracowanie archiwalne zasobów aktowych (systematyzacja strukturalna, klasyfikacja rzeczowa. kwalifikacja archiwalna, sporządzanie ewidencji w formie baz danych)." },
-    { icon: <PackageCheck />, title: "Akta dla archiwów państwowych", description: "Przygotowywanie materiałów archiwalnych (akta kategorii „A”) do przekazania do archiwów państwowych." },
-    { icon: <ArchiveRestore />, title: "Przekazywanie akt do depozytu", description: "Przygotowywanie do przekazania i przekazywanie akt do przechowywania we wskazanych archiwach depozytowych." },
-    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Przechowywanie akt ( w tym dokumentacji pracowniczej)." },
-    { icon: <Scale />, title: "Brakowanie i niszczenie dokumentacji", description: "Brakowanie dokumentacji niearchiwalnej oraz niszczenie akt których okres przechowywania upłynął." },
-    { icon: <Ambulance />, title: "Pogotowie Archiwistyczne", description: "" },
-    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Inne usługi związane z działalnością archiwów." },
+    { icon: <Building />, title: "Organizacja i zakładanie archiwów", description: "Tworzymy od podstaw struktury archiwów, zapewniając fundament dla porządku i bezpieczeństwa Twoich dokumentów." },
+    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Projektujemy jednolite wykazy akt i instrukcje, które standaryzują zarządzanie dokumentacją w Twojej organizacji." },
+    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Zapewniamy regularne wsparcie w prowadzeniu archiwum, gwarantując ciągłość i zgodność z przepisami." },
+    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Przekazujemy praktyczną wiedzę Twojemu zespołowi, aby samodzielnie i poprawnie zarządzał dokumentacją." },
+    { icon: <Database />, title: "Elektroniczna ewidencja zasobu", description: "Wdrażamy nowoczesne systemy cyfrowe, które ułatwiają szybkie wyszukiwanie i zarządzanie aktami." },
+    { icon: <FileStack />, title: "Opracowanie zasobów aktowych", description: "Systematyzujemy, klasyfikujemy i ewidencjonujemy Twoje zbiory, nadając im logiczną i przejrzystą strukturę." },
+    { icon: <Landmark />, title: "Akta dla archiwów państwowych", description: "Profesjonalnie przygotowujemy materiały archiwalne kategorii „A” do bezpiecznego przekazania archiwom państwowym." },
+    { icon: <ArchiveRestore />, title: "Przekazywanie akt do depozytu", description: "Zajmujemy się kompleksowym przygotowaniem i przekazaniem dokumentacji do naszego lub wskazanego archiwum depozytowego." },
+    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Gwarantujemy bezpieczne przechowywanie dokumentacji (w tym pracowniczej) w naszych magazynach archiwalnych." },
+    { icon: <Trash2 />, title: "Brakowanie i niszczenie dokumentacji", description: "Przeprowadzamy bezpieczny i zgodny z prawem proces niszczenia akt, których okres przechowywania minął." },
+    { icon: <Ambulance />, title: "Pogotowie Archiwistyczne", description: "Nagła pomoc w kryzysowych sytuacjach, gdy liczy się czas, precyzja i natychmiastowe działanie." },
+    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Realizujemy niestandardowe zlecenia i konsultacje, dopasowując nasze usługi do Twoich unikalnych potrzeb." },
 ];
 
 const liquidatedCompanies = [
