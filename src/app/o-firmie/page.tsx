@@ -123,10 +123,10 @@ export default function OFirmiePage() {
             <OnScrollAnimator>
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
-                        Porozmawiajmy o Twoich Potrzebach
+                        Zaufaj naszemu doświadczeniu
                     </h2>
                     <p className="mt-4 text-lg text-foreground/70">
-                        Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
+                        Nasza długa historia i setki zadowolonych klientów to najlepsza gwarancja jakości. Skontaktuj się, aby omówić, jak możemy wesprzeć Twoją firmę i otrzymać indywidualną, niezobowiązującą wycenę.
                     </p>
                 </div>
             </OnScrollAnimator>
