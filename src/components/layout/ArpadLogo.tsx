@@ -5,10 +5,10 @@ import Image from 'next/image';
 export default function ArpadLogo({ className }: { className?: string }) {
   return (
     <Image
-      src="https://placehold.co/235x61.png"
-      alt="Arpad Logo Placeholder"
-      width={235}
-      height={61}
+      src="https://placehold.co/400x100.png"
+      alt='Arpad Logo Placeholder'
+      width={400}
+      height={100}
       className={cn('h-10 w-auto', className)}
       priority
       data-ai-hint="company logo"
