@@ -10,7 +10,7 @@ export default function ArpadLogo({ className }: { className?: string }) {
       alt='Arpad Logo'
       width={400}
       height={100}
-      className={cn('h-14 w-auto', className)}
+      className={cn('h-full w-auto', className)}
       priority
       data-ai-hint="company logo"
     />
