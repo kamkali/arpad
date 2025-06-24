@@ -17,8 +17,18 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-headline font-semibold text-white">Informacje</h3>
+            <h3 className="text-lg font-headline font-semibold text-white">Nawigacja</h3>
             <ul className="mt-4 space-y-2 text-sm">
+              <li><Link href="/" className="text-primary-foreground/80 hover:text-accent transition-colors">Strona Główna</Link></li>
+              <li><Link href="/o-firmie" className="text-primary-foreground/80 hover:text-accent transition-colors">O firmie</Link></li>
+              <li><Link href="/oferta" className="text-primary-foreground/80 hover:text-accent transition-colors">Oferta</Link></li>
+              <li><Link href="/galeria" className="text-primary-foreground/80 hover:text-accent transition-colors">Galeria</Link></li>
+              <li><Link href="/kontakt" className="text-primary-foreground/80 hover:text-accent transition-colors">Kontakt</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-headline font-semibold text-white">Informacje i Linki</h3>
+             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <Link href="/o-firmie#rodo" className="text-primary-foreground/80 hover:text-accent transition-colors">Polityka RODO</Link>
               </li>
@@ -28,15 +38,9 @@ export default function Footer() {
               <li>
                 <a href="/wp-content/uploads/2023/01/Wniosek-o-wydanie-dokumentow.doc" className="text-primary-foreground/80 hover:text-accent transition-colors" download>Pobierz wniosek</a>
               </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-headline font-semibold text-white">Przydatne linki</h3>
-             <ul className="mt-4 space-y-2 text-sm">
               <li><a href="https://www.archiwa.gov.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Archiwa Państwowe</a></li>
               <li><a href="https://e-kartoteka.net/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Baza zlikwidowanych zakładów pracy</a></li>
               <li><a href="https://www.zus.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Zakład Ubezpieczeń Społecznych</a></li>
-               <li><a href="https://krs.org.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Krajowa Rada Spółdzielcza</a></li>
             </ul>
           </div>
            <div>

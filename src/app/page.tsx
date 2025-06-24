@@ -1,7 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Medal, ShieldCheck, TrendingDown } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight, FileStack, FolderLock, Trash2 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import OnScrollAnimator from '@/components/OnScrollAnimator';
@@ -10,44 +10,44 @@ import ContactDetails from '@/components/layout/ContactDetails';
 
 export default function Home() {
 
-  const benefits = [
+  const services = [
     {
-      icon: <ShieldCheck className="h-10 w-10 text-accent" />,
-      title: 'Bezpieczeństwo i RODO',
-      description: 'Gwarantujemy pełną poufność i zgodność z RODO na każdym etapie archiwizacji.',
+      icon: <FileStack className="h-10 w-10 text-accent" />,
+      title: 'Archiwizacja i Porządkowanie',
+      description: 'Odzyskaj pełną kontrolę nad dokumentacją. Nasz zespół profesjonalnie zorganizuje, sklasyfikuje i zaewidencjonuje Twoje akta, zapewniając zgodność z przepisami i błyskawiczny dostęp do informacji.',
     },
     {
-      icon: <TrendingDown className="h-10 w-10 text-accent" />,
-      title: 'Oszczędność kosztów',
-      description: 'Działamy bez pośredników, co przekłada się na optymalne koszty i pełną kontrolę nad procesem.',
+      icon: <FolderLock className="h-10 w-10 text-accent" />,
+      title: 'Bezpieczne Przechowywanie',
+      description: 'Gwarantujemy bezpieczne przechowywanie dokumentacji pracowniczej i firmowej przez wymagany prawem okres. Nasze magazyny spełniają najwyższe normy bezpieczeństwa.',
     },
     {
-      icon: <Medal className="h-10 w-10 text-accent" />,
-      title: 'Doświadczenie i Ekspertyza',
-      description: 'Wykorzystujemy sprawdzone metody i własne narzędzia, zapewniając najwyższą jakość usług.',
+      icon: <Trash2 className="h-10 w-10 text-accent" />,
+      title: 'Niszczenie i Zgodność z RODO',
+      description: 'Zapewniamy poufne i certyfikowane niszczenie dokumentów. Oferujemy także pełne wsparcie w zakresie zgodności z RODO, chroniąc Twoją firmę przed ryzykiem.',
     },
   ];
 
   const accordionItems = [
     {
       value: 'item-1',
-      trigger: 'Brak pośrednictwa i podwykonawców!',
-      content: 'Wszystkie usługi realizujemy własnymi siłami, co gwarantuje pełną kontrolę nad procesem i najwyższą jakość.',
+      trigger: 'Pracujesz bezpośrednio z nami. Oszczędzasz do 50%.',
+      content: 'Nie korzystamy z usług podwykonawców. Wszystkie prace realizujemy we własnym zakresie, co daje Ci pełną kontrolę nad procesem i eliminuje koszty pośrednictwa, które mogą podnosić cenę usługi nawet o 50%.',
     },
     {
       value: 'item-2',
-      trigger: 'Materiały archiwizacyjne tj. pudła, teczki, klipsy...',
-      content: 'Zapewniamy wszystkie niezbędne materiały archiwizacyjne, spełniające rygorystyczne normy trwałości i bezpieczeństwa.',
+      trigger: 'Najwyższa jakość materiałów. Standardy Archiwów Państwowych.',
+      content: 'Korzystamy wyłącznie z certyfikowanych materiałów bezkwasowych, które są zalecane przez Archiwa Państwowe. Zapewnia to trwałość i bezpieczeństwo Twojej dokumentacji na dziesięciolecia.',
     },
     {
       value: 'item-3',
-      trigger: 'Własne narzędzia pracy',
-      content: 'Dysponujemy nowoczesnym sprzętem i oprogramowaniem do zarządzania dokumentacją, co usprawnia naszą pracę.',
+      trigger: 'Niezależność technologiczna. Niższe koszty dla Ciebie.',
+      content: 'Dysponujemy własnym, nowoczesnym sprzętem i oprogramowaniem. Nie ponosimy kosztów leasingu czy wypożyczeń, co bezpośrednio przekłada się na niższe ceny dla naszych klientów.',
     },
     {
       value: 'item-4',
-      trigger: 'Duże doświadczenie w branży archiwistycznej',
-      content: 'Wieloletnia obecność na rynku i setki zrealizowanych projektów to gwarancja naszego profesjonalizmu.',
+      trigger: 'Zoptymalizowana struktura. Płacisz za efekty, nie za administrację.',
+      content: 'Nasza zoptymalizowana struktura organizacyjna eliminuje zbędne koszty administracyjne. Płacisz wyłącznie za realnie wykonaną pracę i konkretne efekty, a nie za rozbudowane zaplecze biurowe.',
     },
   ];
   
@@ -73,14 +73,14 @@ export default function Home() {
           <OnScrollAnimator>
             <div className="max-w-3xl">
               <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
-                Nowoczesna Archiwizacja, <span className="text-accent">Dekady Zaufania.</span>
+                Ponad 25 lat doświadczenia. <span className="text-accent">Gwarancja bezpieczeństwa Twoich dokumentów.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg md:text-xl text-primary-foreground/80">
-                Łączymy ponad 25 lat doświadczenia z innowacyjnym podejściem do zarządzania dokumentacją. Zapewniamy bezpieczeństwo, porządek i spokój ducha.
+                Zapewniamy pełną zgodność z obowiązującymi przepisami, w tym RODO. Powierzając nam swoje archiwum, zyskujesz porządek, bezpieczeństwo i spokój ducha.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link href="/oferta">Poznaj naszą ofertę <ArrowRight className="ml-2" /></Link>
+                  <Link href="/oferta">Poznaj nasze usługi <ArrowRight className="ml-2" /></Link>
                 </Button>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function Home() {
                 <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                   <AnimatedCounter to={experienceYears} />
                 </h3>
-                <p className="mt-2 text-lg font-medium text-foreground/80">lat na rynku</p>
+                <p className="mt-2 text-lg font-medium text-foreground/80">Lat na rynku</p>
               </div>
             </OnScrollAnimator>
             <OnScrollAnimator delay={0.2}>
@@ -105,7 +105,7 @@ export default function Home() {
                 <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                   <AnimatedCounter to={500} suffix="+" />
                 </h3>
-                <p className="mt-2 text-lg font-medium text-foreground/80">zadowolonych klientów</p>
+                <p className="mt-2 text-lg font-medium text-foreground/80">Firm i instytucji</p>
               </div>
             </OnScrollAnimator>
             <OnScrollAnimator delay={0.4}>
@@ -113,34 +113,34 @@ export default function Home() {
                 <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                   <AnimatedCounter to={100} suffix="%" />
                 </h3>
-                <p className="mt-2 text-lg font-medium text-foreground/80">gwarancji bezpieczeństwa</p>
+                <p className="mt-2 text-lg font-medium text-foreground/80">zgodności z RODO i prawem</p>
               </div>
             </OnScrollAnimator>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="w-full py-16 md:py-24 bg-muted/50">
+      {/* Services Section */}
+      <section id="services" className="w-full py-16 md:py-24 bg-muted/50">
         <div className="container px-4 md:px-6">
           <OnScrollAnimator className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Twoje Korzyści ze Współpracy z Arpad</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Kompleksowe rozwiązania dla Twojego archiwum</h2>
             <p className="mt-4 text-lg text-foreground/70">
-              Nasze usługi to nie tylko porządkowanie dokumentów. To realne wsparcie dla Twojego biznesu.
+              Od porządkowania i bezpiecznego przechowywania, po niszczenie dokumentów - zapewniamy pełne wsparcie na każdym etapie cyklu życia dokumentacji.
             </p>
           </OnScrollAnimator>
           <div className="grid gap-8 md:grid-cols-3 mt-12">
-            {benefits.map((benefit, index) => (
+            {services.map((service, index) => (
               <OnScrollAnimator key={index} delay={index * 0.2}>
                 <Card className="h-full text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out bg-card">
                   <CardHeader className="items-center">
                     <div className="bg-accent/10 rounded-full p-4">
-                      {benefit.icon}
+                      {service.icon}
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <h3 className="text-xl font-bold font-headline text-primary">{benefit.title}</h3>
-                    <p className="text-foreground/70 mt-2">{benefit.description}</p>
+                    <h3 className="text-xl font-bold font-headline text-primary">{service.title}</h3>
+                    <p className="text-foreground/70 mt-2">{service.description}</p>
                   </CardContent>
                 </Card>
               </OnScrollAnimator>
@@ -155,14 +155,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* Accordion Section */}
       <section className="w-full py-16 md:py-24 bg-background">
         <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
             <OnScrollAnimator>
                 <div className="max-w-xl">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
-                        Dlaczego warto nam zaufać?
+                        Przewaga, którą doceniają nasi klienci
                     </h2>
                     <p className="mt-4 text-lg text-foreground/70">
                         Nasza transparentność i kompleksowe podejście to fundamenty, na których budujemy długotrwałe relacje z klientami. Zapewniamy wszystko, czego potrzebujesz do profesjonalnej archiwizacji.
