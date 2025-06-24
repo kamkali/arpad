@@ -35,14 +35,14 @@ export default function Header() {
         >
           <ArpadLogo />
         </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-base font-medium">
+        <nav className="hidden md:flex items-center space-x-2 text-base font-medium">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "transition-colors hover:text-accent",
-                pathname === item.href ? "text-accent font-semibold" : "text-foreground"
+                "transition-colors px-3 py-2 rounded-md hover:bg-accent/10",
+                pathname === item.href ? "text-accent font-semibold" : "text-foreground hover:text-accent"
               )}
             >
               {item.label}
@@ -65,15 +65,15 @@ export default function Header() {
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="bg-background">
-                    <nav className="flex flex-col space-y-4 mt-8">
+                    <nav className="flex flex-col space-y-1 mt-8">
                     {navItems.map((item) => (
                         <Link
                         key={item.href}
                         href={item.href}
                         onClick={closeMobileMenu}
                         className={cn(
-                            "text-lg transition-colors hover:text-accent font-medium",
-                            pathname === item.href ? "text-accent" : "text-foreground"
+                            "text-lg transition-colors p-3 rounded-md font-medium hover:bg-accent/10",
+                            pathname === item.href ? "text-accent" : "text-foreground hover:text-accent"
                         )}
                         >
                         {item.label}
