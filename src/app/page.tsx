@@ -73,10 +73,10 @@ export default function Home() {
           <OnScrollAnimator>
             <div className="max-w-3xl">
               <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
-                Ponad 25 lat doświadczenia. <span className="text-accent">Gwarancja bezpieczeństwa Twoich dokumentów.</span>
+                Nowoczesna Archiwizacja, <span className="text-accent">Dekady Zaufania.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg md:text-xl text-primary-foreground/80">
-                Zapewniamy pełną zgodność z obowiązującymi przepisami, w tym RODO. Powierzając nam swoje archiwum, zyskujesz porządek, bezpieczeństwo i spokój ducha.
+                Łączymy ponad 25 lat doświadczenia z innowacyjnym podejściem do zarządzania dokumentacją. Zapewniamy bezpieczeństwo, porządek i spokój ducha.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
