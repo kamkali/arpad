@@ -15,7 +15,7 @@ export default function Header() {
   const navItems = [
     { href: '/', label: 'Strona Główna' },
     { href: '/o-firmie', label: 'O firmie' },
-    { href: '/oferta-2', label: 'Oferta' },
+    { href: '/oferta', label: 'Oferta' },
     { href: '/galeria', label: 'Galeria' },
     { href: '/kontakt', label: 'Kontakt' },
   ];

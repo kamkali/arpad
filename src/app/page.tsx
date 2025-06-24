@@ -80,7 +80,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link href="/oferta-2">Poznaj naszą ofertę <ArrowRight className="ml-2" /></Link>
+                  <Link href="/oferta">Poznaj naszą ofertę <ArrowRight className="ml-2" /></Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10">
                   <Link href="/kontakt">Skontaktuj się z nami</Link>
@@ -152,7 +152,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <OnScrollAnimator>
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="/oferta-2">Zobacz pełną ofertę <ArrowRight className="ml-2" /></Link>
+                    <Link href="/oferta">Zobacz pełną ofertę <ArrowRight className="ml-2" /></Link>
                 </Button>
             </OnScrollAnimator>
           </div>

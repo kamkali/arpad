@@ -23,7 +23,7 @@ export default function Footer() {
                 <Link href="/o-firmie#rodo" className="text-primary-foreground/80 hover:text-accent transition-colors">Polityka RODO</Link>
               </li>
               <li>
-                <Link href="/oferta-2#przechowalnictwo" className="text-primary-foreground/80 hover:text-accent transition-colors">Przechowalnictwo</Link>
+                <Link href="/oferta#przechowalnictwo" className="text-primary-foreground/80 hover:text-accent transition-colors">Przechowalnictwo</Link>
               </li>
               <li>
                 <a href="/wp-content/uploads/2023/01/Wniosek-o-wydanie-dokumentow.doc" className="text-primary-foreground/80 hover:text-accent transition-colors" download>Pobierz wniosek</a>
