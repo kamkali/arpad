@@ -21,23 +21,13 @@ export default function Header() {
 
   const kontaktLink = '/#kontakt';
 
-  const [scrolled, setScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 transition-all duration-300",
-      scrolled ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
+      "sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm"
     )}>
       <div className="container px-4 md:px-6 flex h-20 items-center justify-between">
         <Link
@@ -53,13 +43,13 @@ export default function Header() {
               href={item.href}
               className={cn(
                 "transition-colors hover:text-accent",
-                pathname === item.href ? "text-accent font-semibold" : (scrolled ? "text-foreground" : "text-primary-foreground/80 hover:text-primary-foreground")
+                pathname === item.href ? "text-accent font-semibold" : "text-foreground"
               )}
             >
               {item.label}
             </Link>
           ))}
-           <Link href={kontaktLink} className={cn("transition-colors hover:text-accent", scrolled ? "text-foreground" : "text-primary-foreground/80 hover:text-primary-foreground")}>
+           <Link href={kontaktLink} className={cn("transition-colors hover:text-accent", "text-foreground")}>
               Kontakt
             </Link>
         </nav>
@@ -74,7 +64,7 @@ export default function Header() {
         <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
-                    <Button variant="ghost" size="icon" className={cn(scrolled ? "text-foreground" : "text-primary-foreground hover:bg-white/20")}>
+                    <Button variant="ghost" size="icon" className="text-foreground">
                         <Menu className="h-6 w-6" />
                     </Button>
                 </SheetTrigger>
