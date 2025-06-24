@@ -227,34 +227,7 @@ export default function OfertaPage() {
                     Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
                     </p>
                 </div>
-                <div className="mt-12 max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-                    <div className="flex flex-col gap-8">
-                        <a href="tel:+48326424780" className="flex items-center gap-4 group">
-                            <Phone className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
-                            <div>
-                                <p className="text-sm text-muted-foreground">Telefon</p>
-                                <p className="text-2xl font-semibold text-foreground group-hover:text-accent transition-colors">+48 32 642 47 80</p>
-                            </div>
-                        </a>
-                         <a href="tel:+48501439752" className="flex items-center gap-4 group">
-                            <Phone className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
-                            <div>
-                                <p className="text-sm text-muted-foreground">Telefon Komórkowy</p>
-                                <p className="text-2xl font-semibold text-foreground group-hover:text-accent transition-colors">+48 501 439 752</p>
-                            </div>
-                        </a>
-                        <a href="mailto:arpad@arpad.pl" className="flex items-center gap-4 group">
-                            <Mail className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
-                            <div>
-                                <p className="text-sm text-muted-foreground">Email</p>
-                                <p className="text-2xl font-semibold text-foreground group-hover:text-accent transition-colors">arpad@arpad.pl</p>
-                            </div>
-                        </a>
-                        <div>
-                            <p className="text-sm font-semibold text-foreground">Zakład Obsługi Archiwalnej ARPAD Sp. z o.o.</p>
-                            <p className="text-muted-foreground">Krzykawa 7, 32-329 Bolesław, małopolskie, Polska</p>
-                        </div>
-                    </div>
+                <div className="mt-12 max-w-lg mx-auto">
                     <ContactForm />
                 </div>
             </OnScrollAnimator>

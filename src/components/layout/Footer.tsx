@@ -43,13 +43,16 @@ export default function Footer() {
             <h3 className="text-lg font-headline font-semibold text-white">Kontakt</h3>
              <div className="mt-4 text-sm space-y-2">
                <p className="text-primary-foreground/80">Krzykawa 7<br />32-329 Bolesław</p>
-               <p>
+                <p>
+                 <span className="text-primary-foreground/60 mr-1">Tel:</span>
                  <a href="tel:+48326424780" className="text-primary-foreground/80 hover:text-accent transition-colors">+48 32 642 47 80</a>
                </p>
                 <p>
+                 <span className="text-primary-foreground/60 mr-1">Kom:</span>
                  <a href="tel:+48501439752" className="text-primary-foreground/80 hover:text-accent transition-colors">+48 501 439 752</a>
                </p>
                <p>
+                 <span className="text-primary-foreground/60 mr-1">Email:</span>
                  <a href="mailto:arpad@arpad.pl" className="text-primary-foreground/80 hover:text-accent transition-colors">arpad@arpad.pl</a>
                </p>
              </div>

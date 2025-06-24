@@ -82,7 +82,7 @@ export default function Home() {
                   <Link href="/oferta-2">Poznaj naszą ofertę <ArrowRight className="ml-2" /></Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10">
-                  <Link href="#kontakt">Skontaktuj się z nami</Link>
+                  <Link href="/oferta-2#kontakt">Skontaktuj się z nami</Link>
                 </Button>
               </div>
             </div>
@@ -186,27 +186,12 @@ export default function Home() {
           <OnScrollAnimator>
             <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Skontaktuj się z nami</h2>
             <p className="mt-4 mx-auto max-w-2xl text-lg text-primary-foreground/80">
-              Masz pytania lub chcesz rozpocząć współpracę? Jesteśmy do Twojej dyspozycji. Zadzwoń lub napisz, aby uzyskać bezpłatną wycenę.
+              Masz pytania lub chcesz rozpocząć współpracę? Jesteśmy do Twojej dyspozycji. Wypełnij formularz kontaktowy, a my skontaktujemy się z Tobą, aby przygotować bezpłatną wycenę.
             </p>
-            <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
-                <a href="tel:+48326424780" className="flex items-center gap-4 group">
-                    <Phone className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
-                    <div>
-                        <p className="text-sm text-primary-foreground/70">Telefon</p>
-                        <p className="text-2xl font-semibold group-hover:text-accent transition-colors">+48 32 642 47 80</p>
-                    </div>
-                </a>
-                 <a href="mailto:arpad@arpad.pl" className="flex items-center gap-4 group">
-                    <Mail className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
-                    <div>
-                        <p className="text-sm text-primary-foreground/70">Email</p>
-                        <p className="text-2xl font-semibold group-hover:text-accent transition-colors">arpad@arpad.pl</p>
-                    </div>
-                </a>
-            </div>
-            <div className="mt-10 text-center">
-                <p className="font-semibold">Zakład Obsługi Archiwalnej ARPAD Sp. z o.o.</p>
-                <p className="text-primary-foreground/80">Krzykawa 7, 32-329 Bolesław, małopolskie, Polska</p>
+            <div className="mt-8">
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Link href="/oferta-2#kontakt">Wypełnij formularz kontaktowy <ArrowRight className="ml-2" /></Link>
+                </Button>
             </div>
           </OnScrollAnimator>
         </div>
