@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 
 export default function KontaktPage() {
@@ -13,16 +12,16 @@ export default function KontaktPage() {
                     Skontaktuj się z nami
                 </h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-primary-foreground/80">
-                    Masz pytania lub potrzebujesz indywidualnej wyceny? Jesteśmy tutaj, aby pomóc. Wypełnij formularz lub skorzystaj z danych poniżej.
+                    Masz pytania lub potrzebujesz indywidualnej wyceny? Jesteśmy tutaj, aby pomóc. Skorzystaj z danych poniżej.
                 </p>
             </div>
         </OnScrollAnimator>
       </header>
 
       <div className="container py-16 md:py-24 px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+        <div className="flex justify-center">
             <OnScrollAnimator>
-                <Card className="h-full">
+                <Card className="w-full max-w-2xl">
                     <CardHeader>
                         <CardTitle className="text-2xl font-bold font-headline text-primary">Dane Kontaktowe</CardTitle>
                     </CardHeader>
@@ -68,9 +67,6 @@ export default function KontaktPage() {
                         </div>
                     </CardContent>
                 </Card>
-            </OnScrollAnimator>
-             <OnScrollAnimator delay={0.2}>
-                <ContactForm />
             </OnScrollAnimator>
         </div>
       </div>
