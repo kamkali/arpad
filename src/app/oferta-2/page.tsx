@@ -9,18 +9,18 @@ import ContactForm from "@/components/ContactForm";
 import { Mail, Phone } from "lucide-react";
 
 const services = [
-    { icon: <Building />, title: "Organizacja archiwów", description: "Tworzymy od podstaw struktury archiwów zakładowych, zapewniając fundament dla porządku i bezpieczeństwa." },
-    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Projektujemy jednolite wykazy akt i instrukcje, które standaryzują zarządzanie dokumentacją w Twojej organizacji." },
-    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Zapewniamy regularne wsparcie w prowadzeniu archiwum, gwarantując ciągłość i zgodność z przepisami." },
-    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Przekazujemy praktyczną wiedzę Twojemu zespołowi, aby samodzielnie i poprawnie zarządzał dokumentacją." },
-    { icon: <Database />, title: "Elektroniczna ewidencja", description: "Wdrażamy nowoczesne systemy cyfrowe, które ułatwiają szybkie wyszukiwanie i zarządzanie aktami." },
-    { icon: <FileStack />, title: "Opracowanie zasobów", description: "Systematyzujemy, klasyfikujemy i ewidencjonujemy Twoje zbiory, nadając im logiczną i przejrzystą strukturę." },
-    { icon: <Landmark />, title: "Akta dla archiwów państwowych", description: "Profesjonalnie przygotowujemy materiały archiwalne kategorii „A” do bezpiecznego przekazania do archiwów państwowych." },
-    { icon: <ArchiveRestore />, title: "Przekazywanie do depozytu", description: "Zajmujemy się kompleksowym przygotowaniem i przekazaniem dokumentacji do naszego lub wskazanego archiwum." },
-    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Gwarantujemy bezpieczne przechowywanie dokumentacji (w tym pracowniczej) w naszych profesjonalnych magazynach." },
-    { icon: <Trash2 />, title: "Brakowanie i niszczenie", description: "Przeprowadzamy bezpieczny i zgodny z prawem proces niszczenia akt, których okres przechowywania minął." },
+    { icon: <Building />, title: "Organizacja archiwów", description: "Organizację, zakładanie archiwów zakładowych i zakładowych składnic akt." },
+    { icon: <FileCog />, title: "Opracowywanie normatywów", description: "Opracowywanie normatywów kancelaryjno-archiwalnych, w tym jednolitych rzeczowych wykazów akt." },
+    { icon: <Wrench />, title: "Bieżąca obsługa archiwów", description: "Bieżącą obsługę archiwów zakładowych i składnic akt." },
+    { icon: <Users />, title: "Szkolenia dla pracowników", description: "Szkolenia dla pracowników odpowiedzialnych za archiwa zakładowe i składnice." },
+    { icon: <Database />, title: "Elektroniczna ewidencja", description: "Wdrażanie elektronicznych systemów ewidencji zasobu archiwów i składnic." },
+    { icon: <FileStack />, title: "Opracowanie zasobów", description: "Opracowanie archiwalne zasobów aktowych (systematyzacja strukturalna, klasyfikacja rzeczowa. kwalifikacja archiwalna, sporządzanie ewidencji w formie baz danych)." },
+    { icon: <Landmark />, title: "Akta dla archiwów państwowych", description: "Przygotowywanie materiałów archiwalnych (akta kategorii „A”) do przekazania do archiwów państwowych." },
+    { icon: <ArchiveRestore />, title: "Przekazywanie do depozytu", description: "Przygotowywanie do przekazania i przekazywanie akt do przechowywania we wskazanych archiwach depozytowych." },
+    { icon: <FolderLock />, title: "Przechowywanie akt", description: "Przechowywanie akt (w tym dokumentacji pracowniczej)." },
+    { icon: <Trash2 />, title: "Brakowanie i niszczenie", description: "Brakowanie dokumentacji niearchiwalnej oraz niszczenie akt, których okres przechowywania upłynął." },
     { icon: <Ambulance />, title: "Pogotowie Archiwistyczne", description: "Nagła pomoc w kryzysowych sytuacjach, gdy liczy się czas, precyzja i natychmiastowe działanie." },
-    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Realizujemy niestandardowe zlecenia i konsultacje, dopasowując nasze usługi do Twoich unikalnych potrzeb." },
+    { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Inne usługi związane z działalnością archiwów." },
 ];
 
 export default function OfertaPage() {
@@ -44,13 +44,13 @@ export default function OfertaPage() {
             <section>
                 <div className="text-center max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">Zakres Usług</h2>
-                    <p className="mt-4 text-lg text-foreground/70">
+                     <p className="mt-4 text-lg text-foreground/70">
                         Świadczymy pełen wachlarz usług, od tworzenia archiwów po bezpieczne niszczenie dokumentacji. W szczególności:
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                     {services.map((service, index) => (
-                        <OnScrollAnimator key={index} delay={index * 0.1}>
+                        <OnScrollAnimator key={index} delay={index * 0.05}>
                            <Card className="h-full flex flex-col text-center border-border/70 hover:shadow-lg transition-shadow">
                                 <CardHeader className="items-center">
                                     <div className="bg-accent/10 rounded-full p-3 text-accent">
@@ -75,7 +75,7 @@ export default function OfertaPage() {
                  <div className="text-center max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">Wycena Usługi</h2>
                     <p className="mt-4 text-lg text-foreground/70">
-                        Szczegółową ofertę, indywidualną dla każdego podmiotu z podaniem cen usług przedstawiamy po zapoznaniu się z przedmiotem i zakresem zamówienia. Podane niżej ceny są orientacyjne i podlegają negocjacji.
+                         Szczegółową ofertę, indywidualną dla każdego podmiotu z podaniem cen usług przedstawiamy po zapoznaniu się z przedmiotem i zakresem zamówienia. Koszt usługi oblicza się na podstawie cen jednostkowych, ustalanych po dogłębnym zapoznaniu się z przedmiotem zadania oraz po wykonaniu obmiaru zbioru dokumentacji przeznaczonej do opracowania archiwalnego.
                     </p>
                 </div>
                 <Card className="overflow-x-auto mt-12">
@@ -83,40 +83,52 @@ export default function OfertaPage() {
                         <TableHeader>
                             <TableRow>
                                 <TableHead className="font-semibold w-2/3">Usługa / Kategoria Dokumentacji</TableHead>
-                                <TableHead className="font-semibold">Jednostka Miary</TableHead>
                                 <TableHead className="font-semibold text-right">Cena Jednostkowa (PLN netto)</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>
-                            <TableRow><TableCell colSpan={3} className="font-bold bg-primary/5 text-primary">1. Opracowanie Archiwalne Dokumentacji Aktowej</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „BE50–B50” (osobowa)</TableCell><TableCell>za 1 teczkę</TableCell><TableCell className="text-right">od 2,50 do 7,50</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „B50” (płacowa - listy płac)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 90,00 do 135,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „B50” (ubezpieczenia społeczne)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 85,00 do 125,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Zbiorcze karty wynagrodzeń (ułożenie)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 150,00 do 220,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Zbiorcze karty wynagrodzeń (założenie teczki)</TableCell><TableCell>za 1 teczkę</TableCell><TableCell className="text-right">od 3,60 do 5,30</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „A” (przygotowanie do arch. państwowego)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 500,00 do 750,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „B25”</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 180,00 do 270,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „B10” (sprawy sądowe, windykacja)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 110,00 do 170,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „B5–B2” (finansowo-księgowa) - opracowanie</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 49,00 do 99,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „B5–B2” (finansowo-księgowa) - weryfikacja i brakowanie</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 25,00 do 40,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Kat. „BE5” (inwestycje własne)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 120,00 do 160,00</TableCell></TableRow>
-                            
-                            <TableRow><TableCell colSpan={3} className="font-bold bg-primary/5 text-primary">2. Opracowanie Archiwalne Dokumentacji Technicznej</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Inwestycyjna (projekty, kat. A-B25)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 260,00 do 340,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Inwestycyjna (projekty, kat. BE5-B5)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 170,00 do 240,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Konstrukcyjna, technologiczna (kat. A)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 260,00 do 340,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Konstrukcyjna, technologiczna (kat. B)</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 140,00 do 190,00</TableCell></TableRow>
+                            <TableRow><TableCell colSpan={2} className="font-bold bg-primary/5 text-primary">1. Opracowanie archiwalne dokumentacji aktowej</TableCell></TableRow>
 
-                            <TableRow><TableCell colSpan={3} className="font-bold bg-primary/5 text-primary">3. Inne Prace</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Dokumentacja geologiczna i górnicza</TableCell><TableCell>za 1 mb</TableCell><TableCell className="text-right">od 200,00 do 260,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Prace na godziny (nadzór, przenoszenie, itp.)</TableCell><TableCell>za 1 godzinę roboczą</TableCell><TableCell className="text-right">od 24,00 do 29,00</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Odtwarzanie dokumentów osobowych</TableCell><TableCell>za 1 teczkę</TableCell><TableCell className="text-right">od 5,50 do 8,50</TableCell></TableRow>
-                            <TableRow><TableCell className="pl-8">Odtwarzanie dokumentów płacowych</TableCell><TableCell>za 1 rok</TableCell><TableCell className="text-right">od 4,00 do 6,50</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „B10 – B5 – B3 - B2”</TableCell><TableCell className="text-right"></TableCell></TableRow>
+                            <TableRow><TableCell className="pl-12">Dokumentacja finansowo-księgowa i obrotu gospodarczego</TableCell><TableCell className="text-right"></TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Opracowanie akt niezarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie akt zarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie z wywozem i zniszczeniem</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            
+                            <TableRow><TableCell className="pl-12">Dokumentacja działalności podstawowej urzędów i podmiotów gospodarczych</TableCell><TableCell className="text-right"></TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Opracowanie akt niezarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie akt zarchiwizowanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-16">Weryfikacja i brakowanie z wywozem i zniszczeniem</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+
+                            <TableRow><TableCell className="pl-8 font-medium">Dokumentacja pracownicza kategorii „B50– B10 – B5 – B2”</TableCell><TableCell className="text-right"></TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Kategorii „B50-B10-B5” (dokumentacja płacowa)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Zbiorcze karty wynagrodzeń i zasiłkowe (ułożenie)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Zbiorcze karty wynagrodzeń (założenie teczki płacowej)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 teczkę</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Kategorii „BE50 - B50” (dokumentacja osobowa)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 teczkę</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-12">Kategorii „B50-B25-B10-B5” (kadrowo-administracyjna)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „B25”</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „A” (wraz z przygotowaniem do archiwum państwowego)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii wyższej niż "B10" oraz "BE" w organach administracji</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Akta kategorii „BE5 - B5” (inwestycje i remonty)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Dokumentacja realizacji robót budowlanych</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            
+                            <TableRow><TableCell colSpan={2} className="font-bold bg-primary/5 text-primary">2. Opracowanie archiwalne dokumentacji technicznej</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Inwestycyjna (kategorii „A – B25”)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Inwestycyjna (kategorii „BE5-B5”)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Konstrukcyjna i technologiczna (kategorii „A-B25”)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+                            <TableRow><TableCell className="pl-8 font-medium">Konstrukcyjna i technologiczna (kategorii „B”)</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 mb</TableCell></TableRow>
+
+                             <TableRow><TableCell colSpan={2} className="font-bold bg-primary/5 text-primary">3. Inne prace dodatkowe i opracowania</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-8 font-medium">Prace dodatkowe na godziny</TableCell><TableCell className="text-right">Cena do uzgodnienia za 1 godz. roboczą</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-8 font-medium">Opracowanie projektów normatywów kancelaryjno–archiwalnych</TableCell><TableCell className="text-right">Cena do uzgodnienia za projekt/komplet</TableCell></TableRow>
+                             <TableRow><TableCell className="pl-8 font-medium">Opracowanie innych rodzajów dokumentacji (geodezyjna, foto, itp.)</TableCell><TableCell className="text-right">Cena umowna</TableCell></TableRow>
                         </TableBody>
                     </Table>
                 </Card>
-                <div className="mt-4 text-center text-sm text-foreground/60 space-y-1">
-                    <p>Powyższe ceny są cenami umownymi, netto. W przypadku dużych ilości akt lub stałej współpracy stosujemy zniżki i upusty. Ostateczna cena zależy od stanu fizycznego akt, ich ilości oraz przyjętej metodyki pracy.</p>
+                <div className="mt-6 text-center text-sm text-foreground/60 space-y-2">
+                    <p>Powyższe ceny mają charakter umowny, w przypadku dużych ilości akt lub stałej współpracy stosuje się zniżki i upusty. Ceny jednostkowe zależne są od stanu fizycznego akt, przyjętego sposobu ich opracowania, a także innych czynników wpływających na stopień pracochłonności.</p>
+                     <p>Ceny uwzględniają koszt materiałów archiwizacyjnych dla akt kategorii „B”. Koszt materiałów dla akt kategorii „A” nie jest wliczony.</p>
                     <p>Do podanych cen należy doliczyć podatek VAT (23%).</p>
                 </div>
             </section>
@@ -147,39 +159,20 @@ export default function OfertaPage() {
                                     </ol>
                                 </AccordionContent>
                             </AccordionItem>
-                             <AccordionItem value="item-2">
-                                <AccordionTrigger className="text-lg">Szczegółowy Zakres Prac Archiwalnych</AccordionTrigger>
-                                <AccordionContent className="prose prose-sm max-w-none">
-                                    <p>Obejmuje uporządkowanie i zewidencjonowanie zbioru dokumentacji zgromadzonej w archiwum zakładowym/składnicy akt.</p>
-                                    <strong>Zakres wykonywanych prac obejmuje między innymi:</strong>
-                                    <ul>
-                                        <li><strong>Systematyzację dokumentacji</strong> według zespołów aktowych i komórek organizacyjnych.</li>
-                                        <li><strong>Klasyfikację rzeczową i kwalifikację archiwalną akt</strong> (podział na kategorie z określeniem okresu przechowywania).</li>
-                                        <li><strong>Brakowanie przeterminowanej dokumentacji</strong> łącznie z przygotowaniem formalności i uzyskaniem zgody Archiwum Państwowego.</li>
-                                        <li><strong>Archiwizację akt bieżących</strong> - formowanie jednostek, opisywanie, nadawanie sygnatur, umieszczanie w materiałach archiwizacyjnych.</li>
-                                        <li><strong>Porządkowanie dokumentacji pracowniczej</strong> (osobowej i płacowej) oraz uzupełnianie brakujących dokumentów.</li>
-                                        <li><strong>Sporządzenie ewidencji akt</strong> na nośnikach elektronicznych oraz w formie tradycyjnej (rejestry, skorowidze, inwentarze).</li>
-                                        <li><strong>Obsługę archiwum</strong> w okresie postępowania upadłościowego lub likwidacyjnego.</li>
-                                        <li><strong>Bezpieczny wywóz i zniszczenie akt</strong> wybrakowanych wraz z potwierdzeniem.</li>
-                                    </ul>
-                                    <p>W pracach archiwistycznych używamy profesjonalnych narzędzi informatycznych, w tym pakietów biurowych oraz specjalistycznych programów do obsługi archiwum zakładowego.</p>
-                                </AccordionContent>
-                            </AccordionItem>
-                            <AccordionItem value="item-3">
+                            <AccordionItem value="item-2">
                                 <AccordionTrigger className="text-lg">Proces Wyceny i Rozliczeń</AccordionTrigger>
                                 <AccordionContent className="prose prose-sm max-w-none">
-                                    <p>Wycenę wartości usługi sporządzamy po dokonaniu wstępnego obmiaru dokumentacji. Może mieć ona charakter orientacyjny lub ostateczny (ryczałt). Wycena jest zawsze bezpłatna.</p>
-                                    <strong>Podstawą obmiaru ilości dokumentacji jest:</strong>
+                                    <p>Wstępną wycenę wartości zlecenia dokonuje się przed rozpoczęciem prac na podstawie komisyjnego obmiaru akt, wykonywanego przez przedstawicieli obu Stron. Istnieje także możliwość przyjęcia ryczałtowej formy rozliczenia ustalonej z góry.</p>
+                                    <p>Po wykonaniu usługi (częściowo lub w całości) obie Strony komisyjnie sporządzają i podpisują Protokoły Przejściowe Zaawansowania Prac oraz Zdawczo-Odbiorczy Końcowy. Na ich podstawie wystawiane są faktury (częściowe i końcowa). Należność za usługę może być zwiększona o kwotę wynikającą z tytułu prac dodatkowych.</p>
+                                     <strong>Podstawą obmiaru ilości dokumentacji jest jednostka miary:</strong>
                                      <ul>
-                                        <li><strong>Metr bieżący (mb):</strong> Standardowa jednostka miary.</li>
-                                        <li><strong>Metr sześcienny (m³):</strong> Przeliczany na 10-12 mb akt.</li>
-                                        <li><strong>Jednostka aktowa:</strong> Np. teczka osobowa, rysunek techniczny.</li>
-                                        <li><strong>Godzina robocza:</strong> Dla prac dodatkowych, np. przenoszenia akt.</li>
+                                        <li><strong>1 mb (metr bieżący):</strong> Ilość akt mieszcząca się na 1 metrze półki.</li>
+                                        <li><strong>1 m³ (metr sześcienny):</strong> Przeliczany na 10-12 mb akt.</li>
+                                        <li><strong>1 j. a. (jednostka aktowa):</strong> Np. teczka osobowa, mapa, plan, rysunek techniczny.</li>
                                     </ul>
-                                    <p>Po wykonaniu usługi (lub jej części), sporządzamy protokoły przejściowe oraz końcowy protokół zdawczo-odbiorczy, na podstawie których wystawiamy faktury (częściowe i końcową).</p>
                                 </AccordionContent>
                             </AccordionItem>
-                            <AccordionItem value="item-4">
+                             <AccordionItem value="item-3">
                                 <AccordionTrigger className="text-lg">Gwarancja Jakości i Współpraca</AccordionTrigger>
                                 <AccordionContent className="prose prose-sm max-w-none">
                                     <p>Wszystkie usługi wykonujemy zgodnie z obowiązującymi przepisami i wymogami prawnymi dotyczącymi archiwizacji. Prace realizowane są przez naszych pracowników, posiadających wymagane uprawnienia i długoletnie doświadczenie zawodowe.</p>
@@ -221,7 +214,7 @@ export default function OfertaPage() {
                     </Table>
                 </Card>
                  <div className="mt-4 text-center text-sm text-foreground/60">
-                    <p>Podane ceny mają charakter orientacyjny i zależą od ilości dokumentacji. Do cen należy doliczyć podatek VAT (23%).</p>
+                    <p>Podane ceny mają charakter orientacyjny. Do cen należy doliczyć podatek VAT (23%).</p>
                 </div>
             </section>
         </OnScrollAnimator>
@@ -241,6 +234,13 @@ export default function OfertaPage() {
                             <div>
                                 <p className="text-sm text-muted-foreground">Telefon</p>
                                 <p className="text-2xl font-semibold text-foreground group-hover:text-accent transition-colors">+48 32 642 47 80</p>
+                            </div>
+                        </a>
+                         <a href="tel:+48501439752" className="flex items-center gap-4 group">
+                            <Phone className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
+                            <div>
+                                <p className="text-sm text-muted-foreground">Telefon Komórkowy</p>
+                                <p className="text-2xl font-semibold text-foreground group-hover:text-accent transition-colors">+48 501 439 752</p>
                             </div>
                         </a>
                         <a href="mailto:arpad@arpad.pl" className="flex items-center gap-4 group">

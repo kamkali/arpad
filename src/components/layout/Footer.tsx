@@ -11,9 +11,9 @@ export default function Footer() {
               Zakład Obsługi Archiwalnej
             </p>
             <div className="mt-4 text-xs space-y-1 text-primary-foreground/60">
-              <p>NIP: 6372061320</p>
-              <p>KRS: 0000236049</p>
-              <p>REGON: 120067644</p>
+              <p>NIP: 637-205-99-78</p>
+              <p>KRS: 0000241894</p>
+              <p>REGON: 120114890</p>
             </div>
           </div>
           <div>
@@ -32,10 +32,11 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-headline font-semibold text-white">Przydatne linki</h3>
-            <ul className="mt-4 space-y-2 text-sm">
+             <ul className="mt-4 space-y-2 text-sm">
               <li><a href="https://www.archiwa.gov.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Archiwa Państwowe</a></li>
+              <li><a href="https://e-kartoteka.net/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Baza zlikwidowanych zakładów pracy</a></li>
               <li><a href="https://www.zus.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Zakład Ubezpieczeń Społecznych</a></li>
-              <li><a href="https://e-kartoteka.net/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Archiwa Państwowe - dok. pracownicza</a></li>
+               <li><a href="https://krs.org.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Krajowa Rada Spółdzielcza</a></li>
             </ul>
           </div>
            <div>
@@ -45,6 +46,9 @@ export default function Footer() {
                <p>
                  <a href="tel:+48326424780" className="text-primary-foreground/80 hover:text-accent transition-colors">+48 32 642 47 80</a>
                </p>
+                <p>
+                 <a href="tel:+48501439752" className="text-primary-foreground/80 hover:text-accent transition-colors">+48 501 439 752</a>
+               </p>
                <p>
                  <a href="mailto:arpad@arpad.pl" className="text-primary-foreground/80 hover:text-accent transition-colors">arpad@arpad.pl</a>
                </p>
@@ -53,6 +57,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
           <p>©{new Date().getFullYear()}. Zakład Obsługi Archiwalnej ARPAD Spółka z o.o. Wszystkie prawa zastrzeżone.</p>
+           <p className="mt-2">Zapraszamy serdecznie do korzystania z naszych usług.</p>
         </div>
       </div>
     </footer>
