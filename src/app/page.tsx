@@ -1,7 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Archive, ArrowRight, BarChart, FileCheck, Mail, Phone, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Medal, ShieldCheck, TrendingDown } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import OnScrollAnimator from '@/components/OnScrollAnimator';
@@ -17,12 +17,12 @@ export default function Home() {
       description: 'Gwarantujemy pełną poufność i zgodność z RODO na każdym etapie archiwizacji.',
     },
     {
-      icon: <BarChart className="h-10 w-10 text-accent" />,
+      icon: <TrendingDown className="h-10 w-10 text-accent" />,
       title: 'Oszczędność kosztów',
       description: 'Działamy bez pośredników, co przekłada się na optymalne koszty i pełną kontrolę nad procesem.',
     },
     {
-      icon: <FileCheck className="h-10 w-10 text-accent" />,
+      icon: <Medal className="h-10 w-10 text-accent" />,
       title: 'Doświadczenie i Ekspertyza',
       description: 'Wykorzystujemy sprawdzone metody i własne narzędzia, zapewniając najwyższą jakość usług.',
     },
@@ -191,10 +191,10 @@ export default function Home() {
               <OnScrollAnimator>
                   <div className="text-center max-w-3xl mx-auto mb-12">
                       <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
-                          Twoje Archiwum pod Profesjonalną Ochroną
+                      Twoje Archiwum w Rękach Profesjonalistów
                       </h2>
                       <p className="mt-4 text-lg text-foreground/70">
-                          Ponad ćwierć wieku doświadczenia i setki zaufanych partnerów to nasza gwarancja niezawodności. Skontaktuj się z nami, aby omówić, jak możemy wesprzeć Twój biznes poprzez strategiczne zarządzanie dokumentacją i otrzymać niezobowiązującą wycenę.
+                      Zaufaj ponad 25-letniemu doświadczeniu i dołącz do grona naszych partnerów. Skontaktuj się z nami, aby omówić, jak możemy wesprzeć Twój biznes i otrzymać niezobowiązującą wycenę. Jesteśmy gotowi, by wprowadzić porządek i bezpieczeństwo w Twojej dokumentacji.
                       </p>
                   </div>
               </OnScrollAnimator>
