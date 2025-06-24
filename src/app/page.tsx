@@ -82,7 +82,7 @@ export default function Home() {
                   <Link href="/oferta-2">Poznaj naszą ofertę <ArrowRight className="ml-2" /></Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10">
-                  <Link href="/oferta-2#kontakt">Skontaktuj się z nami</Link>
+                  <Link href="/kontakt">Skontaktuj się z nami</Link>
                 </Button>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function Home() {
             </p>
             <div className="mt-8">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="/oferta-2#kontakt">Sprawdź dane kontaktowe <ArrowRight className="ml-2" /></Link>
+                    <Link href="/kontakt">Sprawdź dane kontaktowe <ArrowRight className="ml-2" /></Link>
                 </Button>
             </div>
           </OnScrollAnimator>

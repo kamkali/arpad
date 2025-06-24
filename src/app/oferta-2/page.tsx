@@ -1,11 +1,10 @@
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Ambulance, ArchiveRestore, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench } from "lucide-react";
+import { Ambulance, ArrowRight, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
 
 const services = [
     { icon: <Building />, title: "Organizacja archiwów", description: "Tworzenie i kompleksowe wdrażanie archiwów zakładowych i składnic akt od podstaw." },
@@ -225,49 +224,11 @@ export default function OfertaPage() {
                     <p className="mt-4 text-lg text-foreground/70">
                         Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
                     </p>
-                </div>
-                <div className="mt-12 max-w-4xl mx-auto">
-                   <Card>
-                       <CardContent className="p-6 md:p-10">
-                            <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                                <div className="flex flex-col items-center md:items-start space-y-2">
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-accent/10 rounded-full p-3 text-accent">
-                                            <MapPin className="h-6 w-6" />
-                                        </div>
-                                        <h3 className="text-xl font-bold font-headline text-primary">Adres</h3>
-                                    </div>
-                                    <div className="pl-0 md:pl-16">
-                                        <p className="text-foreground/80">Krzykawa 7</p>
-                                        <p className="text-foreground/80">32-329 Bolesław</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col items-center md:items-start space-y-2">
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-accent/10 rounded-full p-3 text-accent">
-                                            <Phone className="h-6 w-6" />
-                                        </div>
-                                        <h3 className="text-xl font-bold font-headline text-primary">Telefon</h3>
-                                    </div>
-                                    <div className="pl-0 md:pl-16 flex flex-col items-center md:items-start">
-                                        <a href="tel:+48326424780" className="text-foreground/80 hover:text-accent transition-colors">Tel: +48 32 642 47 80</a>
-                                        <a href="tel:+48501439752" className="text-foreground/80 hover:text-accent transition-colors">Kom: +48 501 439 752</a>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col items-center md:items-start space-y-2">
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-accent/10 rounded-full p-3 text-accent">
-                                            <Mail className="h-6 w-6" />
-                                        </div>
-                                        <h3 className="text-xl font-bold font-headline text-primary">Email</h3>
-                                    </div>
-                                     <div className="pl-0 md:pl-16">
-                                        <a href="mailto:arpad@arpad.pl" className="text-foreground/80 hover:text-accent transition-colors">arpad@arpad.pl</a>
-                                    </div>
-                                </div>
-                            </div>
-                       </CardContent>
-                   </Card>
+                    <div className="mt-8">
+                       <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                           <Link href="/kontakt">Przejdź do kontaktu <ArrowRight className="ml-2" /></Link>
+                       </Button>
+                   </div>
                 </div>
             </OnScrollAnimator>
         </section>

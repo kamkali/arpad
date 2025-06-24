@@ -17,9 +17,8 @@ export default function Header() {
     { href: '/o-firmie', label: 'O firmie' },
     { href: '/oferta-2', label: 'Oferta' },
     { href: '/galeria', label: 'Galeria' },
+    { href: '/kontakt', label: 'Kontakt' },
   ];
-
-  const kontaktLink = '/oferta-2#kontakt';
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -49,13 +48,10 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-           <Link href={kontaktLink} className={cn("transition-colors hover:text-accent", "text-foreground")}>
-              Kontakt
-            </Link>
         </nav>
         <div className="hidden md:flex items-center gap-4">
             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full">
-                 <Link href={kontaktLink}>
+                 <Link href="/kontakt">
                     Uzyskaj wycenę
                     <ArrowRight className="ml-2 h-4 w-4"/>
                 </Link>
@@ -83,15 +79,8 @@ export default function Header() {
                         {item.label}
                         </Link>
                     ))}
-                    <Link
-                        href={kontaktLink}
-                        onClick={closeMobileMenu}
-                        className="text-lg transition-colors hover:text-accent font-medium text-foreground"
-                    >
-                        Kontakt
-                    </Link>
                     <Button asChild size="lg" className="mt-4 bg-accent text-accent-foreground hover:bg-accent/90">
-                         <Link href={kontaktLink} onClick={closeMobileMenu}>
+                         <Link href="/kontakt" onClick={closeMobileMenu}>
                             Bezpłatna wycena
                         </Link>
                     </Button>
