@@ -149,7 +149,7 @@ export default function GaleriaPage() {
             <OnScrollAnimator>
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
-                        Zainspirowany? Czas na Twoją Transformację
+                        Czas na Twoją Transformację
                     </h2>
                     <p className="mt-4 text-lg text-foreground/70">
                         Podobają Ci się efekty naszej pracy? Skontaktuj się z nami, a pomożemy Ci osiągnąć podobny porządek i bezpieczeństwo w Twojej firmie. Zacznijmy od niezobowiązującej rozmowy.
