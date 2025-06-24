@@ -2,6 +2,7 @@ import OnScrollAnimator from "@/components/OnScrollAnimator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Ambulance, ArchiveRestore, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const services = [
     { icon: <Building />, title: "Organizacja i zakładanie archiwów", description: "Tworzymy od podstaw struktury archiwów, zapewniając fundament dla porządku i bezpieczeństwa Twoich dokumentów." },
@@ -37,7 +38,7 @@ export default function OfertaPage() {
                 Nasza Oferta
                 </h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-primary-foreground/80">
-                Oferujemy pełny zakres prac archiwistycznych. Naszą ofertę kierujemy zarówno do podmiotów istniejących, jak i tych w trakcie postępowania upadłościowego lub likwidacji.
+                Nasza firma oferuje usługi obejmujące pełny zakres prac archiwistycznych. Naszą ofertę kierujemy zarówno do podmiotów istniejących, jak i tych w trakcie postępowania upadłościowego lub likwidacji.
                 </p>
             </div>
         </OnScrollAnimator>
@@ -108,6 +109,75 @@ export default function OfertaPage() {
                             <TableRow><TableCell>Prace na godziny (przenoszenie, nadzór, itp.)</TableCell><TableCell>za 1 godzinę roboczą</TableCell><TableCell className="text-right">od 24,00 do 29,00</TableCell></TableRow>
                         </TableBody>
                     </Table>
+                </Card>
+            </section>
+        </OnScrollAnimator>
+
+        <OnScrollAnimator>
+            <section className="mt-20 md:mt-28">
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">Szczegółowy Zakres Prac</h2>
+                    <p className="mt-4 text-lg text-foreground/70">
+                        Dowiedz się więcej o kluczowych aspektach naszych usług. Kliknij, aby rozwinąć i poznać szczegóły.
+                    </p>
+                </div>
+                <Card className="mt-12">
+                    <CardContent className="p-4 md:p-6">
+                        <Accordion type="single" collapsible className="w-full">
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger className="text-lg">Opracowanie Archiwalne Zasobu Aktowego</AccordionTrigger>
+                                <AccordionContent className="prose prose-sm max-w-none">
+                                    <p>Obejmuje uporządkowanie i zewidencjonowanie zbioru dokumentacji zgromadzonej w archiwum zakładowym/składnicy akt wraz z przygotowaniem dokumentacji powstającej w poszczególnych komórkach organizacyjnych do przekazania.</p>
+                                    <strong>Zakres wykonywanych prac obejmuje:</strong>
+                                    <ul>
+                                        <li><strong>Systematyzację dokumentacji</strong> według zespołów aktowych i komórek organizacyjnych.</li>
+                                        <li><strong>Klasyfikację rzeczową akt,</strong> tj. przyporządkowanie jednostek do właściwej grupy tematyczno-rzeczowej.</li>
+                                        <li><strong>Kwalifikację archiwalną akt</strong> (podział na kategorie z określeniem okresu przechowywania).</li>
+                                        <li><strong>Brakowanie przeterminowanej dokumentacji</strong> łącznie z przygotowaniem dokumentacji brakowania akt (spisy, protokoły, wnioski do Archiwum Państwowego).</li>
+                                        <li><strong>Weryfikację kwalifikacji archiwalnej</strong> oraz uzupełnienie opisu zarchiwizowanych wcześniej jednostek.</li>
+                                        <li><strong>Archiwizację akt bieżących</strong> - formowanie nowych jednostek, opisywanie, nadawanie sygnatur.</li>
+                                        <li><strong>Sporządzenie ewidencji akt</strong> na nośnikach elektronicznych oraz w formie tradycyjnej (rejestry, skorowidze, inwentarze).</li>
+                                        <li><strong>Wywóz i zniszczenie akt</strong> wybrakowanych wraz z potwierdzeniem ich fizycznego zniszczenia.</li>
+                                    </ul>
+                                    <p>W pracach archiwistycznych używamy profesjonalnych narzędzi informatycznych, w tym pakietów biurowych oraz specjalistycznych programów do obsługi archiwum zakładowego.</p>
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-2">
+                                <AccordionTrigger className="text-lg">Projekty Normatywów i Instruktaż</AccordionTrigger>
+                                <AccordionContent className="prose prose-sm max-w-none">
+                                    <strong>Opracowujemy projekty normatywów kancelaryjno-archiwalnych:</strong>
+                                    <ul>
+                                        <li>Instrukcji o organizacji i zakresie działania archiwum zakładowego/składnicy akt.</li>
+                                        <li>Instrukcji kancelaryjnej.</li>
+                                        <li>Jednolitego rzeczowego wykazu akt.</li>
+                                        <li>Skróconej instrukcji kancelaryjno-archiwalnej.</li>
+                                    </ul>
+                                    <p>Dodatkowo, oferujemy <strong>profesjonalny instruktaż</strong> dla pracownika wyznaczonego przez kierownictwo organizacji do prowadzenia archiwum zakładowego lub składnicy akt.</p>
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-3">
+                                <AccordionTrigger className="text-lg">Bieżąca Obsługa Archiwalna</AccordionTrigger>
+                                <AccordionContent className="prose prose-sm max-w-none">
+                                    <p>Zapewniamy kompleksową, bieżącą obsługę funkcjonującego archiwum zakładowego lub składnicy akt.</p>
+                                    <strong>Zakres usługi obejmuje:</strong>
+                                    <ul>
+                                        <li>Nadzór nad prawidłowością i terminowością przekazywania akt z komórek organizacyjnych.</li>
+                                        <li>Prowadzenie ewidencji akt oraz dokumentacji pracy archiwum.</li>
+                                        <li>Systematyczne wydzielanie dokumentacji niearchiwalnej, której okres przechowywania upłynął.</li>
+                                        <li>Wyszukiwanie, udostępnianie i wypożyczanie akt dla wewnętrznych potrzeb organizacji.</li>
+                                    </ul>
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-4">
+                                <AccordionTrigger className="text-lg">Współpraca i Gwarancja Jakości</AccordionTrigger>
+                                <AccordionContent className="prose prose-sm max-w-none">
+                                    <p>Współpracujemy z zaufanymi firmami świadczącymi usługi w zakresie wyposażenia archiwów, niszczenia dokumentacji oraz tworzenia oprogramowania do zarządzania dokumentacją.</p>
+                                    <p>Uprzejmie informujemy, że wszystkie usługi wykonujemy zgodnie z obowiązującymi przepisami i wymogami prawnymi dotyczącymi archiwizacji i przechowywania dokumentacji.</p>
+                                    <p><strong>Zapraszamy serdecznie do korzystania z naszych usług.</strong> Na życzenie przedstawiamy listę naszych klientów wraz z referencjami. W przypadku zainteresowania, nasz przedstawiciel przyjedzie do Państwa w celu zapoznania się z zakresem prac i oszacowania kosztów usługi.</p>
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                    </CardContent>
                 </Card>
             </section>
         </OnScrollAnimator>
