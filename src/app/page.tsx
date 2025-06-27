@@ -59,15 +59,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full min-h-[70vh] md:min-h-[80vh] flex items-center bg-primary text-primary-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-            <Image
-            src="https://placehold.co/1920x1080.png"
-            alt="Abstrakcyjne tło archiwum"
-            fill={true}
-            style={{objectFit: 'cover'}}
-            quality={80}
-            priority
-            data-ai-hint="blueprint abstract"
-            />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/164603-830873644_small.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className="container relative z-10 px-4 md:px-6">
           <OnScrollAnimator>
