@@ -8,8 +8,8 @@ export default function ArpadLogo({ className }: { className?: string }) {
     <Image
       src={logo}
       alt='Arpad Logo'
-      width={400}
-      height={100}
+      width={2048}
+      height={2048}
       className={cn('h-full w-auto', className)}
       priority
       data-ai-hint="company logo"

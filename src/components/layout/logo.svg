@@ -125,6 +125,6 @@ z
 <rect x="1100" y="1030" width="770" height="10" fill="#209abc" opacity="1.000000"/>
 
 <!-- sp. z o.o. text -->
-<text x="1100" y="1150" font-family="Arial, sans-serif" font-size="90" font-weight="normal" fill="#02324b" text-anchor="start" letter-spacing="8px">sp. z o.o.</text>
+<text x="1100" y="1150" font-family="Arial, sans-serif" font-size="140" font-weight="normal" fill="#02324b" text-anchor="start" letter-spacing="15px">sp. z o.o.</text>
 
 </svg>

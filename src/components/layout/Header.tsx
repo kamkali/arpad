@@ -28,7 +28,7 @@ export default function Header() {
     <header className={cn(
       "sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm"
     )}>
-      <div className="container px-4 md:px-6 flex h-28 items-center justify-between">
+      <div className="container px-4 md:px-6 flex h-20 items-center justify-between">
         <Link
           href="/"
           className="flex h-full items-center"
