@@ -36,7 +36,7 @@ export default function Footer() {
                 <Link href="/oferta#przechowalnictwo" className="text-primary-foreground/80 hover:text-accent transition-colors">Przechowalnictwo</Link>
               </li>
               <li>
-                <a href="/wp-content/uploads/2023/01/Wniosek-o-wydanie-dokumentow.doc" className="text-primary-foreground/80 hover:text-accent transition-colors" download>Pobierz wniosek</a>
+                <a href="/Wniosek-o-wydanie-dokumentow.docx" className="text-primary-foreground/80 hover:text-accent transition-colors" download>Pobierz wniosek</a>
               </li>
               <li><a href="https://www.archiwa.gov.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Archiwa Państwowe</a></li>
               <li><a href="https://e-kartoteka.net/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Baza zlikwidowanych zakładów pracy</a></li>

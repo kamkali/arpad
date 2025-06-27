@@ -17,7 +17,12 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    unoptimized: true, // Required for static export
   },
+  // Configuration for static export
+  output: 'export',
+  trailingSlash: true,
+  distDir: 'out',
 };
 
 export default nextConfig;

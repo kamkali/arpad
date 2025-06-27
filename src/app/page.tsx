@@ -1,18 +1,19 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Medal, ShieldCheck, TrendingDown } from 'lucide-react';
+import { ArrowRight, Archive, ShieldCheck, Trash2 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import OnScrollAnimator from '@/components/OnScrollAnimator';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import ContactDetails from '@/components/layout/ContactDetails';
+import CallToAction from "@/components/layout/CallToAction";
 
 export default function Home() {
 
   const services = [
     {
-      icon: <TrendingDown className="h-10 w-10 text-accent" />,
+      icon: <Archive className="h-10 w-10 text-accent" />,
       title: 'Archiwizacja i Porządkowanie',
       description: 'Odzyskaj pełną kontrolę nad dokumentacją. Nasz zespół profesjonalnie zorganizuje, sklasyfikuje i zaewidencjonuje Twoje akta, zapewniając zgodność z przepisami i błyskawiczny dostęp do informacji.',
     },
@@ -22,7 +23,7 @@ export default function Home() {
       description: 'Gwarantujemy bezpieczne przechowywanie dokumentacji pracowniczej i firmowej przez wymagany prawem okres. Nasze magazyny spełniają najwyższe normy bezpieczeństwa.',
     },
     {
-      icon: <Medal className="h-10 w-10 text-accent" />,
+      icon: <Trash2 className="h-10 w-10 text-accent" />,
       title: 'Niszczenie i Zgodność z RODO',
       description: 'Zapewniamy poufne i certyfikowane niszczenie dokumentów. Oferujemy także pełne wsparcie w zakresie zgodności z RODO, chroniąc Twoją firmę przed ryzykiem.',
     },
@@ -73,14 +74,23 @@ export default function Home() {
           <OnScrollAnimator>
             <div className="max-w-3xl">
               <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
-                Nowoczesna Archiwizacja, <span className="text-accent">Dekady Zaufania.</span>
+                Nowoczesna Archiwizacja,{" "}
+                <span className="text-accent">Dekady Zaufania.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg md:text-xl text-primary-foreground/80">
-                Łączymy ponad 25 lat doświadczenia z innowacyjnym podejściem do zarządzania dokumentacją. Zapewniamy bezpieczeństwo, porządek i spokój ducha.
+                Łączymy ponad 25 lat doświadczenia z innowacyjnym podejściem do
+                zarządzania dokumentacją. Zapewniamy bezpieczeństwo, porządek i
+                spokój ducha.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link href="/oferta">Poznaj nasze usługi <ArrowRight className="ml-2" /></Link>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90"
+                >
+                  <Link href="/oferta">
+                    Poznaj nasze usługi <ArrowRight className="ml-2" />
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -97,7 +107,9 @@ export default function Home() {
                 <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                   <AnimatedCounter to={experienceYears} />
                 </h3>
-                <p className="mt-2 text-lg font-medium text-foreground/80">Lat na rynku</p>
+                <p className="mt-2 text-lg font-medium text-foreground/80">
+                  Lat na rynku
+                </p>
               </div>
             </OnScrollAnimator>
             <OnScrollAnimator delay={0.2}>
@@ -105,15 +117,19 @@ export default function Home() {
                 <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                   <AnimatedCounter to={500} suffix="+" />
                 </h3>
-                <p className="mt-2 text-lg font-medium text-foreground/80">Zadowolonych klientów</p>
+                <p className="mt-2 text-lg font-medium text-foreground/80">
+                  Zadowolonych klientów
+                </p>
               </div>
             </OnScrollAnimator>
             <OnScrollAnimator delay={0.4}>
-             <div className="p-4">
+              <div className="p-4">
                 <h3 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                   <AnimatedCounter to={100} suffix="%" />
                 </h3>
-                <p className="mt-2 text-lg font-medium text-foreground/80">Zgodności z RODO i prawem</p>
+                <p className="mt-2 text-lg font-medium text-foreground/80">
+                  Zgodności z RODO i prawem
+                </p>
               </div>
             </OnScrollAnimator>
           </div>
@@ -124,9 +140,13 @@ export default function Home() {
       <section id="services" className="w-full py-16 md:py-24 bg-muted/50">
         <div className="container px-4 md:px-6">
           <OnScrollAnimator className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Kompleksowe rozwiązania dla Twojego archiwum</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
+              Kompleksowe rozwiązania dla Twojego archiwum
+            </h2>
             <p className="mt-4 text-lg text-foreground/70">
-              Od porządkowania i bezpiecznego przechowywania, po niszczenie dokumentów - zapewniamy pełne wsparcie na każdym etapie cyklu życia dokumentacji.
+              Od porządkowania i bezpiecznego przechowywania, po niszczenie
+              dokumentów - zapewniamy pełne wsparcie na każdym etapie cyklu
+              życia dokumentacji.
             </p>
           </OnScrollAnimator>
           <div className="grid gap-8 md:grid-cols-3 mt-12">
@@ -139,8 +159,12 @@ export default function Home() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <h3 className="text-xl font-bold font-headline text-primary">{service.title}</h3>
-                    <p className="text-foreground/70 mt-2">{service.description}</p>
+                    <h3 className="text-xl font-bold font-headline text-primary">
+                      {service.title}
+                    </h3>
+                    <p className="text-foreground/70 mt-2">
+                      {service.description}
+                    </p>
                   </CardContent>
                 </Card>
               </OnScrollAnimator>
@@ -148,36 +172,52 @@ export default function Home() {
           </div>
           <div className="mt-16 text-center">
             <OnScrollAnimator>
-                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="/oferta">Zobacz pełną ofertę <ArrowRight className="ml-2" /></Link>
-                </Button>
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                <Link href="/oferta">
+                  Zobacz pełną ofertę <ArrowRight className="ml-2" />
+                </Link>
+              </Button>
             </OnScrollAnimator>
           </div>
         </div>
       </section>
-      
+
       {/* Accordion Section */}
       <section className="w-full py-16 md:py-24 bg-background">
         <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
-            <OnScrollAnimator>
-                <div className="max-w-xl">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
-                        Przewaga, którą doceniają nasi klienci
-                    </h2>
-                    <p className="mt-4 text-lg text-foreground/70">
-                        Nasza transparentność i kompleksowe podejście to fundamenty, na których budujemy długotrwałe relacje z klientami. Zapewniamy wszystko, czego potrzebujesz do profesjonalnej archiwizacji.
-                    </p>
-                    <Button asChild size="lg" className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90">
-                        <Link href="/o-firmie">Dowiedz się więcej o nas</Link>
-                    </Button>
-                </div>
-            </OnScrollAnimator>
+          <OnScrollAnimator>
+            <div className="max-w-xl">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
+                Przewaga, którą doceniają nasi klienci
+              </h2>
+              <p className="mt-4 text-lg text-foreground/70">
+                Nasza transparentność i kompleksowe podejście to fundamenty, na
+                których budujemy długotrwałe relacje z klientami. Zapewniamy
+                wszystko, czego potrzebujesz do profesjonalnej archiwizacji.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                <Link href="/o-firmie">Dowiedz się więcej o nas</Link>
+              </Button>
+            </div>
+          </OnScrollAnimator>
           <OnScrollAnimator delay={0.2}>
             <Accordion type="single" collapsible className="w-full">
               {accordionItems.map((item) => (
                 <AccordionItem value={item.value} key={item.value}>
-                  <AccordionTrigger className="text-lg font-medium text-left hover:text-accent">{item.trigger}</AccordionTrigger>
-                  <AccordionContent className="text-base text-foreground/80">{item.content}</AccordionContent>
+                  <AccordionTrigger className="text-lg font-medium text-left hover:text-accent">
+                    {item.trigger}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-foreground/80">
+                    {item.content}
+                  </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
@@ -186,21 +226,10 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="kontakt" className="w-full py-16 md:py-24 bg-muted/50">
-          <div className="container px-4 md:px-6">
-              <OnScrollAnimator>
-                  <div className="text-center max-w-3xl mx-auto mb-12">
-                      <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
-                          Zapewnij Swojej Firmie Niezawodne Partnerstwo
-                      </h2>
-                      <p className="mt-4 text-lg text-foreground/70">
-                          Zaufaj ponad 25-letniemu doświadczeniu i dołącz do grona naszych partnerów. Skontaktuj się z nami, aby omówić, jak możemy wesprzeć Twój biznes i otrzymać niezobowiązującą wycenę. Jesteśmy gotowi, by wprowadzić porządek i bezpieczeństwo w Twojej dokumentacji.
-                      </p>
-                  </div>
-              </OnScrollAnimator>
-              <ContactDetails />
-          </div>
-      </section>
+      <CallToAction
+        title="Twoje Archiwum w Pewnych Rękach. Zaufanie Budowane od 1993 Roku."
+        description="Od ponad ćwierć wieku pomagamy firmom takim jak Twoja odzyskać kontrolę nad archiwum. Skorzystaj z naszej wiedzy i nowoczesnych rozwiązań. Porozmawiajmy o bezpieczeństwie Twoich danych – poproś o darmową wycenę."
+      />
     </div>
   );
 }

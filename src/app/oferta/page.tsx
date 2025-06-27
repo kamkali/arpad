@@ -1,11 +1,9 @@
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Ambulance, ArrowRight, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench, ArchiveRestore } from "lucide-react";
+import { Ambulance, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench, ArchiveRestore } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import ContactDetails from "@/components/layout/ContactDetails";
+import CallToAction from "@/components/layout/CallToAction";
 
 const services = [
     { icon: <Building />, title: "Organizacja archiwów i składnic", description: "Tworzenie od podstaw i modernizacja istniejących archiwów zakładowych oraz składnic akt." },
@@ -208,23 +206,11 @@ export default function OfertaPage() {
                 </div>
             </section>
         </OnScrollAnimator>
-
-        <section id="kontakt" className="w-full py-16 md:py-24 bg-muted/50 mt-20 md:mt-28">
-            <div className="container px-4 md:px-6">
-                <OnScrollAnimator>
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-primary">
-                            Porozmawiajmy o Twoich Potrzebach
-                        </h2>
-                        <p className="mt-4 text-lg text-foreground/70">
-                            Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę.
-                        </p>
-                    </div>
-                </OnScrollAnimator>
-                <ContactDetails />
-            </div>
-        </section>
       </div>
+      <CallToAction
+        title="Porozmawiajmy o Twoich Potrzebach"
+        description="Każda firma ma inną specyfikę. Skontaktuj się z nami, aby omówić swoje potrzeby i otrzymać niezobowiązującą, indywidualną wycenę."
+      />
     </div>
   );
 }
