@@ -2,6 +2,11 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import OnScrollAnimator from '@/components/OnScrollAnimator';
 import CallToAction from '@/components/layout/CallToAction';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Galeria",
+};
 
 export default function GaleriaPage() {
   return (

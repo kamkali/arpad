@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2, Milestone } from 'lucide-react';
 import ContactDetails from '@/components/layout/ContactDetails';
 import CallToAction from '@/components/layout/CallToAction';
+import { Metadata } from "next";
 
 const liquidatedCompanies = [
     'Przedsiębiorstwo Produkcyjno-Handlowe "ORION" Spółka z o. o. w upadłości w Tarnowskich Górach',
@@ -24,6 +25,10 @@ const timelineEvents = [
     { year: 2018, event: 'Osiągnięcie progu 25 lat nieprzerwanej działalności na rynku, ugruntowanie pozycji jako lidera w branży archiwistycznej.' },
     { year: 2023, event: 'Uruchomienie nowego, bezpiecznego archiwum depozytowego i wdrożenie zaawansowanych protokołów bezpieczeństwa danych.' },
 ]
+
+export const metadata: Metadata = {
+  title: "O firmie",
+};
 
 export default function OFirmiePage() {
   return (

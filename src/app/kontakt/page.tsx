@@ -1,9 +1,14 @@
 import OnScrollAnimator from "@/components/OnScrollAnimator";
 import ContactDetails from "@/components/layout/ContactDetails";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+};
 
 export default function KontaktPage() {
   return (
-    <div className="bg-background">
+    <main className="bg-background">
       <header className="py-20 md:py-32 bg-primary text-primary-foreground text-center">
         <OnScrollAnimator>
             <div className="container px-4 md:px-6">
@@ -23,6 +28,6 @@ export default function KontaktPage() {
         </div>
         <ContactDetails />
       </div>
-    </div>
+    </main>
   );
 }

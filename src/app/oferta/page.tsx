@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Ambulance, Building, Database, FileCog, FileStack, FolderLock, Landmark, PlusCircle, Trash2, Users, Wrench, ArchiveRestore } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CallToAction from "@/components/layout/CallToAction";
+import { Metadata } from "next";
 
 const services = [
     { icon: <Building />, title: "Organizacja archiwów i składnic", description: "Tworzenie od podstaw i modernizacja istniejących archiwów zakładowych oraz składnic akt." },
@@ -19,6 +20,10 @@ const services = [
     { icon: <Ambulance />, title: "Pogotowie Archiwistyczne", description: "Nagła pomoc w kryzysowych sytuacjach, gdy liczy się czas, precyzja i natychmiastowe działanie." },
     { icon: <PlusCircle />, title: "Inne usługi archiwistyczne", description: "Elastyczne usługi dopasowane do nietypowych i specyficznych potrzeb klienta." },
 ];
+
+export const metadata: Metadata = {
+  title: "Oferta",
+};
 
 export default function OfertaPage() {
   return (

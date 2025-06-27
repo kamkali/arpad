@@ -8,6 +8,11 @@ import OnScrollAnimator from '@/components/OnScrollAnimator';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import ContactDetails from '@/components/layout/ContactDetails';
 import CallToAction from "@/components/layout/CallToAction";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Archiwizacja | ARPAD",
+}
 
 export default function Home() {
 

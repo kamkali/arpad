@@ -5,8 +5,12 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Archiwum Reborn - Usługi Archiwizacyjne | Arpad.pl',
-  description: 'Ponad 25 lat doświadczenia w profesjonalnej archiwizacji i przechowywaniu dokumentów. Zapewniamy bezpieczeństwo, zgodność z RODO i nowoczesne rozwiązania dla Twojej firmy.',
+  title: {
+    default: "ARPAD | Archiwizacja",
+    template: "%s | ARPAD",
+  },
+  description:
+    "Ponad 25 lat doświadczenia w profesjonalnej archiwizacji i przechowywaniu dokumentów. Zapewniamy bezpieczeństwo, zgodność z RODO i nowoczesne rozwiązania dla Twojej firmy.",
 };
 
 export default function RootLayout({
