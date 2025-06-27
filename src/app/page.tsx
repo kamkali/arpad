@@ -9,6 +9,7 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 import ContactDetails from '@/components/layout/ContactDetails';
 import CallToAction from "@/components/layout/CallToAction";
 import { Metadata } from 'next';
+import CtaButton from '@/components/ui/CtaButton';
 
 export const metadata: Metadata = {
   title: "Archiwizacja | ARPAD",
@@ -88,15 +89,9 @@ export default function Home() {
                 spokój ducha.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-accent text-accent-foreground hover:bg-accent/90"
-                >
-                  <Link href="/oferta">
-                    Poznaj nasze usługi <ArrowRight className="ml-2" />
-                  </Link>
-                </Button>
+                <CtaButton href="/oferta" showArrow={true}>
+                  Poznaj nasze usługi
+                </CtaButton>
               </div>
             </div>
           </OnScrollAnimator>
@@ -177,15 +172,9 @@ export default function Home() {
           </div>
           <div className="mt-16 text-center">
             <OnScrollAnimator>
-              <Button
-                asChild
-                size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
-              >
-                <Link href="/oferta">
-                  Zobacz pełną ofertę <ArrowRight className="ml-2" />
-                </Link>
-              </Button>
+              <CtaButton href="/oferta" showArrow={true}>
+                Zobacz pełną ofertę
+              </CtaButton>
             </OnScrollAnimator>
           </div>
         </div>
@@ -204,13 +193,9 @@ export default function Home() {
                 których budujemy długotrwałe relacje z klientami. Zapewniamy
                 wszystko, czego potrzebujesz do profesjonalnej archiwizacji.
               </p>
-              <Button
-                asChild
-                size="lg"
-                className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90"
-              >
-                <Link href="/o-firmie">Dowiedz się więcej o nas</Link>
-              </Button>
+              <CtaButton href="/o-firmie" colorVariant="primary" className="mt-6">
+                Dowiedz się więcej o nas
+              </CtaButton>
             </div>
           </OnScrollAnimator>
           <OnScrollAnimator delay={0.2}>
