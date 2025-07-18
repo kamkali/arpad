@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import logo from '../../../public/logo.svg';
+import logo from './logo.svg';
 
 export default function ArpadLogo({ className }: { className?: string }) {
   return (
