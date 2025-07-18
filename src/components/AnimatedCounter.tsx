@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useInView, animate } from "framer-motion";
 
 type AnimatedCounterProps = {
   from?: number;
@@ -14,38 +13,54 @@ type AnimatedCounterProps = {
 
 export default function AnimatedCounter({ from = 0, to, duration = 1.5, className, prefix = "", suffix = "" }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [isClient, setIsClient] = useState(false);
-  const [displayValue, setDisplayValue] = useState(to); // Start with final value for SSR
-  const isInView = useInView(ref, { once: true });
+  const [displayValue, setDisplayValue] = useState(to); // Always start with final value
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    // Simple intersection observer without framer-motion
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            
+            // Simple animation
+            let start = from;
+            const increment = (to - from) / (duration * 60); // Assuming 60fps
+            
+            const animate = () => {
+              start += increment;
+              if (start < to) {
+                setDisplayValue(Math.round(start));
+                requestAnimationFrame(animate);
+              } else {
+                setDisplayValue(to);
+              }
+            };
+            
+            if (from !== to) {
+              requestAnimationFrame(animate);
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-  useEffect(() => {
-    if (isClient && isInView && ref.current) {
-      const node = ref.current;
-      setDisplayValue(from); // Reset to start value before animating
-      
-      const controls = animate(from, to, {
-        duration,
-        ease: "easeOut",
-        onUpdate(value) {
-          const roundedValue = Math.round(value);
-          setDisplayValue(roundedValue);
-          node.textContent = prefix + roundedValue.toString() + suffix;
-        },
-      });
-      return () => controls.stop();
-    }
-  }, [isClient, isInView, from, to, duration, prefix, suffix]);
-
-  // For SSR/static export, show final value immediately
-  useEffect(() => {
     if (ref.current) {
-      ref.current.textContent = prefix + displayValue.toString() + suffix;
+      observer.observe(ref.current);
     }
-  }, [displayValue, prefix, suffix]);
 
-  return <span ref={ref} className={className} />;
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [from, to, duration, hasAnimated]);
+
+  return (
+    <span ref={ref} className={className}>
+      {prefix}{displayValue}{suffix}
+    </span>
+  );
 }
