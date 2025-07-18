@@ -4,7 +4,7 @@
 NODE_MODULES = node_modules
 PACKAGE_LOCK = package-lock.json
 NEXT_DIR = .next
-OUT_DIR = out
+OUT_DIR = docs
 
 # Colors for output
 GREEN = \033[0;32m
