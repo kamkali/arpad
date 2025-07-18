@@ -73,7 +73,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/arpad/hero_video.mp4" type="video/mp4" />
+            <source src="/hero_video.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="container relative z-10 px-4 md:px-6">

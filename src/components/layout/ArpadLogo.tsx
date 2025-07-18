@@ -1,8 +1,7 @@
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import logo from './logo.svg';
+import logo from '@/public/logo.svg';
 
-// A simple placeholder for the logo. You can replace the `src` with your own image file.
 export default function ArpadLogo({ className }: { className?: string }) {
   return (
     <Image
