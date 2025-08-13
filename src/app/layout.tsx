@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | ARPAD",
   },
   description:
-    "Ponad 25 lat doświadczenia w profesjonalnej archiwizacji i przechowywaniu dokumentów. Zapewniamy bezpieczeństwo, zgodność z RODO i nowoczesne rozwiązania dla Twojej firmy.",
+    "Ponad 30 lat doświadczenia w profesjonalnej archiwizacji i przechowywaniu dokumentów. Zapewniamy bezpieczeństwo, zgodność z RODO i nowoczesne rozwiązania dla Twojej firmy.",
 };
 
 export default function RootLayout({

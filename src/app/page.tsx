@@ -73,7 +73,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/arpad/hero_video.mp4" type="video/mp4" />
+            <source src="/hero_video.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="container relative z-10 px-4 md:px-6">
@@ -84,7 +84,7 @@ export default function Home() {
                 <span className="text-accent">Dekady Zaufania.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg md:text-xl text-primary-foreground/80">
-                Łączymy ponad 25 lat doświadczenia z innowacyjnym podejściem do
+                Łączymy ponad 30 lat doświadczenia z innowacyjnym podejściem do
                 zarządzania dokumentacją. Zapewniamy bezpieczeństwo, porządek i
                 spokój ducha.
               </p>
@@ -218,7 +218,7 @@ export default function Home() {
       {/* Contact Section */}
       <CallToAction
         title="Twoje Archiwum w Pewnych Rękach. Zaufanie Budowane od 1993 Roku."
-        description="Od ponad ćwierć wieku pomagamy firmom takim jak Twoja odzyskać kontrolę nad archiwum. Skorzystaj z naszej wiedzy i nowoczesnych rozwiązań. Porozmawiajmy o bezpieczeństwie Twoich danych – poproś o darmową wycenę."
+        description="Od ponad 30 lat pomagamy firmom takim jak Twoja odzyskać kontrolę nad archiwum. Skorzystaj z naszej wiedzy i nowoczesnych rozwiązań. Porozmawiajmy o bezpieczeństwie Twoich danych – poproś o darmową wycenę."
       />
     </div>
   );

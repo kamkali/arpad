@@ -37,7 +37,7 @@ const milestones = [
   {
     year: "2018",
     icon: <CheckCircle2 />,
-    description: "Osiągnięcie progu 25 lat nieprzerwanej działalności na rynku, ugruntowanie pozycji lidera w branży archiwistycznej.",
+    description: "Osiągnięcie progu 30 lat nieprzerwanej działalności na rynku, ugruntowanie pozycji lidera w branży archiwistycznej.",
   },
   {
     year: new Date().getFullYear().toString(),
@@ -62,7 +62,7 @@ export default function OFirmiePage() {
                     Historia zbudowana na zaufaniu
                 </h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-primary-foreground/80">
-                    Dowiedz się, jak przez ponad ćwierć wieku doskonaliliśmy nasze usługi, stając się synonimem bezpieczeństwa i profesjonalizmu w archiwizacji.
+                    Dowiedz się, jak przez ponad 30 lat doskonaliliśmy nasze usługi, stając się synonimem bezpieczeństwa i profesjonalizmu w archiwizacji.
                 </p>
             </div>
         </OnScrollAnimator>
@@ -134,20 +134,20 @@ export default function OFirmiePage() {
                 </section>
             </OnScrollAnimator>
 
-            <OnScrollAnimator>
-                <section id="rodo" className="mt-16 p-8 bg-primary/5 rounded-lg border border-primary/20">
-                    <h2 className={`${h2ClassName} mt-0`}>Bezpieczeństwo Danych (RODO)</h2>
-                    <p className="mt-6">
-                        W Zakładzie Obsługi Archiwalnej ARPAD Sp. z o.o. kwestie przestrzegania przepisów RODO, z racji charakteru wykonywanych usług, są objęte szczególnym priorytetem.
-                    </p>
-                    <ul className="mt-4 space-y-3">
-                        <li className="flex items-start"><CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" /><span>W Spółce powołano Inspektora Ochrony Danych oraz wdrożono Politykę Ochrony Danych Osobowych.</span></li>
-                        <li className="flex items-start"><CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" /><span>Przetwarzamy dane osobowe zgodnie z obowiązującymi przepisami, z zachowaniem pełnej przejrzystości, rzetelności i bezpieczeństwa.</span></li>
-                        <li className="flex items-start"><CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" /><span>Wszystkie dane przechowywane są na szyfrowanych nośnikach, a dostęp do nich jest ściśle kontrolowany.</span></li>
-                        <li className="flex items-start"><CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" /><span>Okres przetwarzania danych jest uzależniony od rodzaju zawartej umowy, a po jego upływie dane są trwale i nieodwracalnie usuwane.</span></li>
-                    </ul>
-                </section>
-            </OnScrollAnimator>
+            {/*<OnScrollAnimator>*/}
+            {/*    <section id="rodo" className="mt-16 p-8 bg-primary/5 rounded-lg border border-primary/20">*/}
+            {/*        <h2 className={`${h2ClassName} mt-0`}>Bezpieczeństwo Danych (RODO)</h2>*/}
+            {/*        <p className="mt-6">*/}
+            {/*            W Zakładzie Obsługi Archiwalnej ARPAD Sp. z o.o. kwestie przestrzegania przepisów RODO, z racji charakteru wykonywanych usług, są objęte szczególnym priorytetem.*/}
+            {/*        </p>*/}
+            {/*        <ul className="mt-4 space-y-3">*/}
+            {/*            <li className="flex items-start"><CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" /><span>W Spółce powołano Inspektora Ochrony Danych oraz wdrożono Politykę Ochrony Danych Osobowych.</span></li>*/}
+            {/*            <li className="flex items-start"><CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" /><span>Przetwarzamy dane osobowe zgodnie z obowiązującymi przepisami, z zachowaniem pełnej przejrzystości, rzetelności i bezpieczeństwa.</span></li>*/}
+            {/*            <li className="flex items-start"><CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" /><span>Wszystkie dane przechowywane są na szyfrowanych nośnikach, a dostęp do nich jest ściśle kontrolowany.</span></li>*/}
+            {/*            <li className="flex items-start"><CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" /><span>Okres przetwarzania danych jest uzależniony od rodzaju zawartej umowy, a po jego upływie dane są trwale i nieodwracalnie usuwane.</span></li>*/}
+            {/*        </ul>*/}
+            {/*    </section>*/}
+            {/*</OnScrollAnimator>*/}
 
             <OnScrollAnimator>
                 <section className="mt-20">
@@ -168,18 +168,6 @@ export default function OFirmiePage() {
                                 </ul>
                             </CardContent>
                         </Card>
-                    </div>
-                    <p className="mt-8 text-center max-w-2xl mx-auto">
-                        Aby uzyskać dostęp do dokumentacji, pobierz i wypełnij poniższy wniosek, a następnie skontaktuj się z nami w celu umówienia wizyty.
-                    </p>
-                    <div className="mt-6 text-center">
-                        <CtaButton
-                            href="/Wniosek-o-wydanie-dokumentow.docx"
-                            download={true}
-                            colorVariant="accent"
-                        >
-                            Pobierz wniosek o wydanie dokumentacji
-                        </CtaButton>
                     </div>
                 </section>
             </OnScrollAnimator>

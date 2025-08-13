@@ -70,21 +70,28 @@ export default function ContactDetails() {
       </OnScrollAnimator>
 
       <OnScrollAnimator delay={0.2}>
-        <div className="mt-8 md:mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-8">
+        <div className="flex justify-center">
           <PrimaryLinkButton href="mailto:arpad@arpad.pl">
             Napisz wiadomość
           </PrimaryLinkButton>
-          <CtaButton
-            href="/Wniosek-o-wydanie-dokumentow.docx"
-            download={true}
-            variant="outline"
-            colorVariant="primary"
-            className="py-6 px-12 text-2xl font-bold font-headline rounded-full"
-          >
-            Pobierz wniosek
-          </CtaButton>
         </div>
       </OnScrollAnimator>
+
+      <OnScrollAnimator delay={0.3}>
+        <p className="mt-8 text-center max-w-2xl mx-auto">
+            Aby uzyskać dostęp do dokumentacji, pobierz i wypełnij poniższy wniosek, a następnie skontaktuj się z nami w celu umówienia wizyty.
+        </p>
+        <div className="mt-6 text-center">
+            <CtaButton
+                href="/Wniosek-o-wydanie-dokumentow.docx"
+                download={true}
+                colorVariant="accent"
+            >
+                Pobierz wniosek o wydanie dokumentacji
+            </CtaButton>
+        </div>
+      </OnScrollAnimator>
+
     </div>
   );
 }

@@ -35,7 +35,7 @@ export default function OfertaPage() {
                 Nasza Oferta
                 </h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-primary-foreground/80">
-                Od ponad ćwierć wieku zapewniamy kompleksowe i bezpieczne rozwiązania archiwistyczne dla firm i instytucji. Nasze usługi, od tworzenia archiwów po niszczenie dokumentacji, gwarantują pełną zgodność z prawem i optymalizację procesów. Obsługujemy zarówno działające przedsiębiorstwa, jak i podmioty w trakcie restrukturyzacji lub likwidacji, dostosowując ofertę do indywidualnych potrzeb.
+                Od ponad 30 lat zapewniamy kompleksowe i bezpieczne rozwiązania archiwistyczne dla firm i instytucji. Nasze usługi, od tworzenia archiwów po niszczenie dokumentacji, gwarantują pełną zgodność z prawem i optymalizację procesów. Obsługujemy zarówno działające przedsiębiorstwa, jak i podmioty w trakcie restrukturyzacji lub likwidacji, dostosowując ofertę do indywidualnych potrzeb.
                 </p>
             </div>
         </OnScrollAnimator>

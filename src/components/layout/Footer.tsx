@@ -30,17 +30,15 @@ export default function Footer() {
             <h3 className="text-lg font-headline font-semibold text-white">Informacje i Linki</h3>
              <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <Link href="/o-firmie#rodo" className="text-primary-foreground/80 hover:text-accent transition-colors">Polityka RODO</Link>
+                <Link href="/klauzule-informacyjne" className="text-primary-foreground/80 hover:text-accent transition-colors">Polityka RODO</Link>
               </li>
               <li>
                 <Link href="/oferta#przechowalnictwo" className="text-primary-foreground/80 hover:text-accent transition-colors">Przechowalnictwo</Link>
               </li>
-              <li>
-                <Link href="/Wniosek-o-wydanie-dokumentow.docx" download className="text-primary-foreground/80 hover:text-accent transition-colors">Wniosek o wydanie dokumentów</Link>
-              </li>
               <li><a href="https://www.archiwa.gov.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Archiwa Państwowe</a></li>
-              <li><a href="https://e-kartoteka.net/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Baza zlikwidowanych zakładów pracy</a></li>
-              <li><a href="https://www.zus.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Zakład Ubezpieczeń Społecznych</a></li>
+              <li><a href="https://archiwa.gov.pl/szukaj/dokumentacja-pracownicza/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Archiwa Państwowe - dokumentacja pracownicza</a></li>
+              <li><a href="https://www.zus.pl/swiadczenia/emerytury/baza-zlikwidowanych-lub-przeksztalconych-zakladow-pracy" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Baza zlikwidowanych lub przekształconych zakładów pracy</a></li>
+              <li><a href="https://krs.org.pl/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">Krajowa Rada Spółdzielcza</a></li>
             </ul>
           </div>
            <div>
